@@ -95,33 +95,41 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-@font-face{
-    font-family: Pathway;
-    src:url(../fonts/PathwayGothicOne-Regular.ttf);
-}
 
 html{
-    font-family: Pathway;
+    font-family: 'Pathway Gothic One';
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+         -o-font-smoothing: antialiased;
+            font-smoothing: antialiased;
 }
 
 /* GENERAL WRAPPERS*/
+    #fakeHeight{
+        position: absolute;
+        width: 100%;
+        height: 400%;
+        min-height: 2400px;
+    }
     #fullWrapper{
         position: absolute;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     #currentWrapper{
-        position: absolute;
+        position: fixed;
         margin: auto;
         top: 0; bottom: 0; 
         right: 0; left: 0;
 
         width: 90%;
-        width: calc(100% - 20px);
+        width: calc(100% - 50px);
 
         height: 90%;
-        height: calc(100% - 20px);
+        height: calc(100% - 50px);
         background-color: #fff;
     }
 
@@ -133,7 +141,7 @@ html{
 /* END GENERAL WRAPPERS*/
 
 /*NAVIGATION MENU*/
-    #menuWrapper li{
+    #menuWrapper .menuOptions{
         position: fixed;
         width: 100px;
         height: 30px;
@@ -144,19 +152,11 @@ html{
         z-index: 1000;
         color: #fff;
         margin: auto;
-    }
-
-    #menuWrapper a{
-        text-decoration: none;
-        color: #fff;
-    }
-
-    #menuWrapper a:hover{
-        color: gold;
+        letter-spacing: 1px;
     }
 
     #homeMenu{
-        top: 15px;
+        top: 40px;
         left: 0;
         right: 0;
     }
@@ -165,7 +165,7 @@ html{
         top: 0;
         bottom: 0;
         left: 0;
-        margin-left: -15px !important;
+        margin-left: 5px !important;
 
         -webkit-transform: rotate(-90deg);
            -moz-transform: rotate(-90deg);
@@ -178,7 +178,7 @@ html{
         top: 0;
         bottom: 0;
         right: 0;
-        margin-right: -15px !important;
+        margin-right: 5px !important;
 
         -webkit-transform: rotate(90deg);
            -moz-transform: rotate(90deg);
@@ -188,15 +188,51 @@ html{
     }
 
     #contactoMenu{
-        width: 100% !important;
-        bottom: 10px;
+        position: fixed;
+        width: 300px;
+        height: 90px;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #fff;
+        margin: auto;
+        
+        bottom: -30px;
         left: 0;
         right: 0;
+
+        z-index: 1000;
         cursor: pointer;
     }
 
     #contactoMenu a{
         display: block;
+    }
+
+    #rrss{
+        position: absolute;
+        width: 120px;
+        height: 30px;
+        margin: auto;
+        left: 0; right: 0;
+        bottom: 30px;
+        z-index: 1000;
+    }
+
+    #rrss li{
+        list-style-type: none;
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1; /* Fix for IE7 */
+        *display: inline; /* Fix for IE7 */
+        border-bottom: 1px solid rgba(255,255,255,0);
+    }
+
+    #rrss li:hover{
+        border-bottom: 1px solid rgba(255,255,255,1);
     }
 /*END NAVIGATION MENU*/
 
@@ -218,21 +254,23 @@ html{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: aqua;
-        opacity: .5;
+        opacity: .8;
+        background: url(../img/home/CF-2.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: top center;
     }
 
     #logoWrapper{
         position: absolute;
-        width: 500px;
-        height: 200px;
+        width: 375px;
+        height: 110px;
         margin: auto;
         top: 0; bottom: 0;
         right: 0; left: 0;
-        background-color: purple;
     }
 
-    #logoWrapper img{
+    #logoWrapper img {
         width: 100%;
     }
 /*END HOME SECTION*/
@@ -242,8 +280,167 @@ html{
         position: absolute;
         height: 100%;
         left: 0;
-        background-color: green;
+        background-color: #000;
     }
+
+    #biografiaCurtain{
+        position: absolute;
+        height: 100%;
+        left: 0;
+        background-color: #fff;
+        overflow: scroll;
+    }
+
+    #biografiaContainer{
+        position: absolute;
+        width: 100%;
+        height: 400%;
+    }
+
+    #bioLogo{
+        position: fixed;
+        width: 237px;
+        height: 70px;
+        top: 66px;
+        right: 66px;
+    }
+
+    #bioLogo img{
+        width: 100%;
+    }
+
+    .bioSections{
+        position: relative;
+        width: 100%;
+        height: 25%;
+    }
+        #bioSec1 .textWrapper {
+            position: absolute;
+            width: 841.5px;
+            height: 65%;
+            top: 40%;
+            right: 15%;
+            text-align: center;
+        }
+
+            #bioSec1 .textWrapper .bioTitles{
+                text-transform: uppercase;
+                font-size: 4em;
+                line-height: 1em;
+                -webkit-font-smoothing: antialiased !important;
+                   -moz-font-smoothing: antialiased !important;
+                    -ms-font-smoothing: antialiased !important;
+                     -o-font-smoothing: antialiased !important;
+                        font-smoothing: antialiased !important;
+            }
+
+            #bioSec1 .textWrapper p{
+                width: 92%;
+                margin: auto;
+                left: 0; right: 0;
+                margin-top: 50px;
+                font-size: 1.4em;
+            }
+
+        #bioSec2 .textWrapper {
+            position: absolute;
+            width: 45%;
+            height: 80%;
+            top: 20%;
+            right: 15%;
+            text-align: left;
+            letter-spacing: 0.3px;
+        }
+
+            #bioSec2 .textWrapper .bioTitles{
+                width: 335px;
+                text-transform: uppercase;
+                font-size: 4em;
+                line-height: 1em;
+                -webkit-font-smoothing: antialiased !important;
+                   -moz-font-smoothing: antialiased !important;
+                    -ms-font-smoothing: antialiased !important;
+                     -o-font-smoothing: antialiased !important;
+                        font-smoothing: antialiased !important;
+            }
+
+            #bioSec2 .textWrapper p{
+                margin-top: 50px;
+                padding: 20px;
+                margin-left: -20px;
+                font-size: 1.4em;
+                background-color: rgba(255,255,255,0.9);
+            }
+
+        #bioSec3 .textWrapper {
+            position: absolute;
+            width: 270px;
+            height: 86%;
+            top: 14%;
+            right: 35%;
+            text-align: left;
+        }
+
+            #bioSec3 .textWrapper .bioTitles{
+                text-transform: uppercase;
+                font-size: 4em;
+                line-height: 1em;
+                -webkit-font-smoothing: antialiased !important;
+                   -moz-font-smoothing: antialiased !important;
+                    -ms-font-smoothing: antialiased !important;
+                     -o-font-smoothing: antialiased !important;
+                        font-smoothing: antialiased !important;
+            }
+
+            #bioSec3 .textWrapper p{
+                width: 92%;
+                margin: auto;
+                margin-top: 50px;
+                font-size: 1.4em;
+            }
+
+        #bioSec4 .textWrapper {
+            position: absolute;
+            width: 45%;
+            height: 60%;
+            top: 40%;
+            right: 15%;
+            text-align: center;
+        }
+
+            #bioSec4 .textWrapper .bioTitles{
+                text-transform: uppercase;
+                font-size: 4em;
+                line-height: 1em;
+                -webkit-font-smoothing: antialiased !important;
+                   -moz-font-smoothing: antialiased !important;
+                    -ms-font-smoothing: antialiased !important;
+                     -o-font-smoothing: antialiased !important;
+                        font-smoothing: antialiased !important;
+            }
+
+            #bioSec4 .textWrapper p{
+                width: 92%;
+                margin: auto;
+                left: 0; right: 0;
+                margin-top: 50px;
+                font-size: 1.4em;
+            }
+
+
+    /*LETTERS ANIMATION BG*/
+        #lettersWrapper{
+            position: fixed;
+            width: 100%;
+            height: 400%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bioLetters img{
+            height: 100vh;
+        }
+    /*END LETTERS ANIMATION BG*/
 /*END BIOGRAFIA SECTION*/
 
 /*GALERIA SECTION*/
@@ -251,9 +448,18 @@ html{
         position: absolute;
         height: 100%;
         right: 0;
-        background-color: red;
+        background-color: #000;
+    }
+
+    #galeriaCurtain{
+        position: absolute;
+        height: 100%;
+        right: 0;
+        background-color: #fff;
     }
 /*END GALERIA SECTION*/
+
+
 
 
 
@@ -277,12 +483,35 @@ html{
                 transition: all 1.8s cubic-bezier(.6,0,0,1);
     }
 
+    /*MENU TEXT COLOURS*/
+        .menuOnBlack{
+            text-decoration: none;
+            color: rgba(255,255,255,0.4);
+        }
+        .menuOnBlack:hover{
+            color: rgba(255,255,255,1);
+        }
+
+        .menuOnWhite{
+            text-decoration: none;
+            color: rgba(179,179,179,1);
+        }
+        .menuOnWhite:hover{
+            color: rgba(248,185,134,1);
+        }
+    /*END TEXT COLOURS*/
+
     .hiddenSection{
         width: 0%;
     }
 
     .showSection{
         width: 100% !important;
+    }
+
+    .eraseBG{
+        background: none !important;
+        background-color: transparent !important;
     }
 
     .crystal{
