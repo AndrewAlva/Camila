@@ -97,7 +97,7 @@ textarea {
 
 
 html{
-    font-family: 'Pathway Gothic One';
+    font-family: 'Pathway Gothic One', sans-serif;
     -webkit-font-smoothing: antialiased;
        -moz-font-smoothing: antialiased;
         -ms-font-smoothing: antialiased;
@@ -120,7 +120,7 @@ html{
     }
 
     #currentWrapper{
-        position: fixed;
+        position: absolute;
         margin: auto;
         top: 0; bottom: 0; 
         right: 0; left: 0;
@@ -222,6 +222,9 @@ html{
     }
 
     #rrss li{
+        position: relative;
+        width: 30px;
+        height: 30px;
         list-style-type: none;
         float: left;
         display: inline-block;
@@ -229,10 +232,21 @@ html{
         zoom: 1; /* Fix for IE7 */
         *display: inline; /* Fix for IE7 */
         border-bottom: 1px solid rgba(255,255,255,0);
+        opacity: 0.5;
     }
 
     #rrss li:hover{
         border-bottom: 1px solid rgba(255,255,255,1);
+        opacity: 1;
+    }
+
+    #rrss li img{
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        top: 0;  bottom: 0;
+        right: 0; left: 0; 
     }
 /*END NAVIGATION MENU*/
 
@@ -254,7 +268,7 @@ html{
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: .8;
+        opacity: 1;
         background: url(../img/home/CF-2.jpg);
         -webkit-background-size: cover;
         background-size: cover;
@@ -280,15 +294,15 @@ html{
         position: absolute;
         height: 100%;
         left: 0;
-        background-color: #000;
+        background-color: #fff;
+        overflow: scroll;
     }
 
     #biografiaCurtain{
         position: absolute;
-        height: 100%;
+        height: 495%;
         left: 0;
         background-color: #fff;
-        overflow: scroll;
     }
 
     #biografiaContainer{
@@ -313,12 +327,19 @@ html{
         position: relative;
         width: 100%;
         height: 25%;
+        margin-bottom: 15%;
     }
+
+    .bioSections:last-child{
+        margin-bottom: 0%;
+    }
+
         #bioSec1 .textWrapper {
             position: absolute;
             width: 841.5px;
-            height: 65%;
-            top: 40%;
+            height: 310px;
+            margin: auto;
+            top: 0; bottom: 0;
             right: 15%;
             text-align: center;
         }
@@ -338,46 +359,111 @@ html{
                 width: 92%;
                 margin: auto;
                 left: 0; right: 0;
-                margin-top: 50px;
+                margin-top: 20px;
                 font-size: 1.4em;
-            }
-
-        #bioSec2 .textWrapper {
-            position: absolute;
-            width: 45%;
-            height: 80%;
-            top: 20%;
-            right: 15%;
-            text-align: left;
-            letter-spacing: 0.3px;
-        }
-
-            #bioSec2 .textWrapper .bioTitles{
-                width: 335px;
-                text-transform: uppercase;
-                font-size: 4em;
-                line-height: 1em;
-                -webkit-font-smoothing: antialiased !important;
-                   -moz-font-smoothing: antialiased !important;
-                    -ms-font-smoothing: antialiased !important;
-                     -o-font-smoothing: antialiased !important;
-                        font-smoothing: antialiased !important;
-            }
-
-            #bioSec2 .textWrapper p{
-                margin-top: 50px;
                 padding: 20px;
-                margin-left: -20px;
-                font-size: 1.4em;
                 background-color: rgba(255,255,255,0.9);
             }
+
+        #bioSec2 .bgStroke{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(../img/biografia/A_Stroke.png);
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+        #bioVoiceWrapper{
+            position: absolute;
+            width: 90%;
+            height: 80%;
+            margin: auto;
+            top: 0; bottom: 0; right: 0; left: 0;
+        }
+
+            .bioLeftCol{
+                position: relative;
+                width: 30%;
+                height: 100%;
+                float: left;
+                display: inline-block;
+                vertical-align: top;
+                zoom: 1; /* Fix for IE7 */
+                *display: inline; /* Fix for IE7 */
+            }
+
+                #bioSec2 .bioPicture{
+                    position: absolute;
+                    width: 77%;
+                    height: 77%;
+                    margin: auto;
+                    left: 0; right: 0;
+                    top: 0; bottom: 0;
+                }
+
+                    #bioSec2 .bioPicture .bioPic1{
+                        position: absolute;
+                        width: 320px;
+                        height: 320px;
+                        margin: auto;
+                        left: 0; right: 0;
+                        background: url(../img/biografia/camila_bio_01.png);
+                        background-repeat: no-repeat;
+                        -webkit-background-size: 100%;
+                        background-size: 100%;
+                    }
+
+            .bioRightCol{
+                position: relative;
+                width: 60%;
+                height: 100%;
+                float: left;
+                display: inline-block;
+                vertical-align: top;
+                zoom: 1; /* Fix for IE7 */
+                *display: inline; /* Fix for IE7 */
+                text-align: left;
+                letter-spacing: 0.3px;
+            }
+
+                #bioSec2 .textWrapper {
+                    position: absolute;
+                    width: 84%;
+                    height: 80%;
+                    margin: auto;
+                    top: 0; bottom: 0; 
+                    left: 0; right: 0;
+                }
+
+                    #bioSec2 .textWrapper .bioTitles{
+                        width: 335px;
+                        text-transform: uppercase;
+                        font-size: 4em;
+                        line-height: 1em;
+                        -webkit-font-smoothing: antialiased !important;
+                           -moz-font-smoothing: antialiased !important;
+                            -ms-font-smoothing: antialiased !important;
+                             -o-font-smoothing: antialiased !important;
+                                font-smoothing: antialiased !important;
+                    }
+
+                    #bioSec2 .textWrapper p{
+                        margin-top: 20px;
+                        padding: 20px;
+                        margin-left: -20px;
+                        font-size: 1.4em;
+                        background-color: rgba(255,255,255,0.9);
+                    }
 
         #bioSec3 .textWrapper {
             position: absolute;
             width: 270px;
             height: 86%;
-            top: 14%;
-            right: 35%;
+            top: 9%;
+            left: 45%;
             text-align: left;
         }
 
@@ -395,18 +481,42 @@ html{
             #bioSec3 .textWrapper p{
                 width: 92%;
                 margin: auto;
-                margin-top: 50px;
+                margin-top: 20px;
                 font-size: 1.4em;
+                padding: 20px;
+                margin-left: -20px;
+                background-color: rgba(255,255,255,0.9);
             }
 
         #bioSec4 .textWrapper {
             position: absolute;
             width: 45%;
-            height: 60%;
-            top: 40%;
+            height: 80%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
             right: 15%;
             text-align: center;
         }
+
+            #bioSec4 .bioPicture{
+                position: relative;
+                width: 100%;
+                height: 254px;
+                margin-bottom: 40px;
+            }
+
+            #bioSec4 .bioPicture .bioPic2{
+                position: absolute;
+                width: 254px;
+                height: 254px;
+                margin: auto;
+                left: 0; right: 0;
+                background: url(../img/biografia/camila_bio_02.png);
+                background-repeat: no-repeat;
+                -webkit-background-size: 100%;
+                background-size: 100%;
+            }
 
             #bioSec4 .textWrapper .bioTitles{
                 text-transform: uppercase;
@@ -423,22 +533,59 @@ html{
                 width: 92%;
                 margin: auto;
                 left: 0; right: 0;
-                margin-top: 50px;
+                margin-top: 20px;
                 font-size: 1.4em;
+                padding: 20px;
+                background-color: rgba(255,255,255,0.9);
             }
 
 
     /*LETTERS ANIMATION BG*/
-        #lettersWrapper{
-            position: fixed;
+
+        .bioletters{
+            position: absolute;
             width: 100%;
-            height: 400%;
-            top: 0;
-            z-index: -1;
+            height: 100%;
         }
 
         .bioLetters img{
-            height: 100vh;
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+        }
+
+        #bioSec1{
+            background: url(../img/biografia/C_cut.png);
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 15% 0;
+            /*background-color: rgba(255,255,255,1);*/
+        }
+
+        #bioSec2{
+            background: url(../img/biografia/A_foil_L.png);
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            /*background-color: rgba(255,255,255,1);*/
+        }
+
+        #bioSec3{
+            background: url(../img/biografia/M_foil.png);
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*background-color: rgba(255,255,255,1);*/
+        }
+
+        #bioSec4{
+            background: url(../img/biografia/I_foil.png);
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*background-color: rgba(255,255,255,1);*/
         }
     /*END LETTERS ANIMATION BG*/
 /*END BIOGRAFIA SECTION*/
@@ -448,7 +595,7 @@ html{
         position: absolute;
         height: 100%;
         right: 0;
-        background-color: #000;
+        background-color: #fff;
     }
 
     #galeriaCurtain{
@@ -457,6 +604,55 @@ html{
         right: 0;
         background-color: #fff;
     }
+
+    #galeriaContainer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+    }
+
+        .galRows{
+            position: relative;
+            height: 100%;
+            float: left;
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1; /* Fix for IE7 */
+            *display: inline; /* Fix for IE7 */
+        }
+
+        .galRows:first-child, .galRows:last-child{
+            width: 25%;
+        }
+
+        .galRows:nth-child(2){
+            width: 50%;
+        }
+
+        .galImg:nth-child(odd){
+            background-color: aqua;
+            opacity: .5;
+        }
+
+        .galImg img{
+            width: 100%;
+        }
+
+        .galFullImg{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            float: left;
+        }
+
+        .galMidImg{
+            position: relative;
+            width: 50%;
+            height: 300px;
+            float: left;
+        }
 /*END GALERIA SECTION*/
 
 
@@ -511,11 +707,11 @@ html{
 
     .eraseBG{
         background: none !important;
-        background-color: transparent !important;
+        background-color: rgba(255,255,255,0) !important;
     }
 
     .crystal{
-        opacity: 0;
+        opacity: 0 !important;
     }
 
     .testing{

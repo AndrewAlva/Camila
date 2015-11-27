@@ -22,7 +22,22 @@ jQuery(document).ready(function($) {
 					triggerGal = 1;
 					$('#biografiaWrapper').removeClass('showSection');
 					$('#galeriaWrapper').removeClass('showSection');
+
+					$('#homeWrapper').removeClass('eraseBG');
+					$('#img1').removeClass('crystal');
+					$('#logoHome').removeClass('crystal');
 				},300);
+
+				
+				setTimeout(function(){
+
+					
+					$('#currentWrapper').removeClass('eraseBG');
+					
+					
+					$('#biografiaWrapper').removeClass('eraseBG');
+					$('#biografiaCurtain').removeClass('eraseBG');
+				},1900);
 
 				// CHANGING COLOR
 				$('.menuOnWhite').addClass('menuOnBlack');
@@ -31,6 +46,17 @@ jQuery(document).ready(function($) {
 				$('#textContacto').removeClass('contactoOnWhite');
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
+
+				// CHANGE RRSS COLOUR
+				$('#sn-ico').removeAttr('src');
+				$('#ig-ico').removeAttr('src');
+				$('#fb-ico').removeAttr('src');
+				$('#tw-ico').removeAttr('src');
+
+				$('#sn-ico').attr('src', 'img/rrss/sn.svg');
+				$('#ig-ico').attr('src', 'img/rrss/ig.svg');
+				$('#fb-ico').attr('src', 'img/rrss/fb.svg');
+				$('#tw-ico').attr('src', 'img/rrss/tw.svg');
 			}
 		});
 
@@ -58,10 +84,10 @@ jQuery(document).ready(function($) {
 					triggerHome = 1;
 					$('#biografiaContainer').removeClass('crystal');
 
-					$('#logoHome').addClass('hidden');
+					$('#logoHome').addClass('crystal');
 					$('#currentWrapper').addClass('eraseBG');
 					$('#homeWrapper').addClass('eraseBG');
-					$('#img1').addClass('eraseBG');
+					$('#img1').addClass('crystal');
 					$('#biografiaWrapper').addClass('eraseBG');
 
 					setTimeout(function(){
@@ -84,7 +110,17 @@ jQuery(document).ready(function($) {
 				$('.contactoOnWhite').css('color', 'rgba(179,179,179,1)');
 				
 
-				
+
+				// CHANGE RRSS COLOUR
+				$('#sn-ico').removeAttr('src');
+				$('#ig-ico').removeAttr('src');
+				$('#fb-ico').removeAttr('src');
+				$('#tw-ico').removeAttr('src');
+
+				$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
+				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
+				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
+				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
 			}
 		});
 
@@ -122,7 +158,18 @@ jQuery(document).ready(function($) {
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
 
-				
+
+				// CHANGE RRSS COLOUR
+				$('#sn-ico').removeAttr('src');
+				$('#ig-ico').removeAttr('src');
+				$('#fb-ico').removeAttr('src');
+				$('#tw-ico').removeAttr('src');
+
+
+				$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
+				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
+				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
+				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
 			}
 		});
 

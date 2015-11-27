@@ -6,7 +6,7 @@
         <title>CAMILA FERNÁNDEZ</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Pathway+Gothic+One|Open+Sans:800">
+        <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
@@ -31,10 +31,10 @@
                         <a id="textContacto" class="menuOnBlack contactoOnBlack easeInOut" href="#">Conóceme</a>
 
                         <div id="rrss" class="crystal easeInOut">
-                            <li class="easeInOut"><img src="https://placeholdit.imgix.net/~text?txtsize=5&txt=30%C3%9730&w=30&h=30" alt="instagram"></li>
-                            <li class="easeInOut"><img src="https://placeholdit.imgix.net/~text?txtsize=5&txt=30%C3%9730&w=30&h=30" alt="snapchat"></li>
-                            <li class="easeInOut"><img src="https://placeholdit.imgix.net/~text?txtsize=5&txt=30%C3%9730&w=30&h=30" alt="facebook"></li>
-                            <li class="easeInOut"><img src="https://placeholdit.imgix.net/~text?txtsize=5&txt=30%C3%9730&w=30&h=30" alt="twitter"></li>
+                            <li class="easeInOut"><img id="sn-ico" src="img/rrss/sn.svg" alt="instagram"></li>
+                            <li class="easeInOut"><img id="ig-ico" src="img/rrss/ig.svg" alt="snapchat"></li>
+                            <li class="easeInOut"><img id="fb-ico" src="img/rrss/fb.svg" alt="facebook"></li>
+                            <li class="easeInOut"><img id="tw-ico" src="img/rrss/tw.svg" alt="twitter"></li>
                         </div>
                     </div>
 
@@ -44,84 +44,95 @@
 
 
             <div id="currentWrapper" class="easeInOut">
-                <div id="homeWrapper">
+                <div id="homeWrapper" class="easeInOut">
                     <div id="imgContainer">
-                        <div id="img1"></div>
+                        <div id="img1" class="easeInOut"></div>
                     </div>
 
                     <div id="logoWrapper">
-                        <img id="logoHome" src="img/brand/camila_foil.png" alt="Camila Fernandez">
+                        <img id="logoHome" class="easeInOut" src="img/brand/camila_foil.png" alt="Camila Fernandez">
                     </div>
-
                 </div>
 
 
 
                 <div id="biografiaWrapper" class="hiddenSection easeInOutSlow">
                     <div id="biografiaCurtain" class="hiddenSection easeInOutSlow">
-                        <div id="biografiaContainer" class="innerSection crystal easeInOut">
-                            
+                    </div>
 
-                            <div id="bioLogo">
-                                <img src="img/brand/camila-logo-b.svg" alt="Camila Fernández">
+                    <div id="biografiaContainer" class="innerSection crystal easeInOut">
+                    
+                        <div id="bioLogo">
+                            <img src="img/brand/camila-logo-b.svg" alt="Camila Fernández">
+                        </div>
+
+                        <div id="bioSec1" class="bioSections">
+
+                            <!-- <div id="letter-1" class="bioLetters easeInOut crystal">
+                                <img src="img/biografia/C_foil.png" alt="C">
+                            </div> -->
+
+                            <div class="textWrapper">
+                                <div class="bioTitles">Genuina con la música, como el oxígeno que respira desde que nació</div>
+
+                                <p>Camila Fernández sale al mundo a compartir lo que siente a través de su voz. Nacida en Guadalajara, Jalisco, en 1997, siempre ha estado rodeada de música, tanto por ser hija de Alejandro Fernández y nieta de Vicente Fernández, como por elección propia. Simple y sencillamente le encanta. De la música se nutre y a través de esta se expresa, tan es así que cantando es como se ha ido abriendo camino en este mundo.</p>
                             </div>
+                        </div>
 
-                            <div id="bioSec1" class="bioSections">
+                        <div id="bioSec2" class="bioSections">
+                            <!-- <div id="letter-2" class="bioLetters easeInOut crystal">
+                                <img src="img/biografia/A_foil_L.png" alt="A">
+                            </div> -->
+                            <div class="bgStroke"></div>
 
-                                <div id="letter-1" class="bioLetters easeInOut crystal">
-                                    <img src="img/biografia/C_foil.png" alt="C">
+                            <div id="bioVoiceWrapper">
+                                <div class="bioLeftCol">
+                                    <div class="bioPicture">
+                                        <div class="bioPic1"></div>
+                                    </div>
                                 </div>
 
-                                <div class="textWrapper">
-                                    <div class="bioTitles">Genuina con la música, como el oxígeno que respira desde que nació</div>
+                                <div class="bioRightCol">
+                                    <div class="textWrapper">
+                                        <div class="bioTitles">Descubrimiento de su voz</div>
 
-                                    <p>Camila Fernández sale al mundo a compartir lo que siente a través de su voz. Nacida en Guadalajara, Jalisco, en 1997, siempre ha estado rodeada de música, tanto por ser hija de Alejandro Fernández y nieta de Vicente Fernández, como por elección propia. Simple y sencillamente le encanta. De la música se nutre y a través de esta se expresa, tan es así que cantando es como se ha ido abriendo camino en este mundo.</p>
+                                        <p>Cuando era apenas estudiante de primaria en los Estados Unidos, Camila se ganó el respeto de quienes la llegaron a señalar despectivamente por ser latina, al realizar un casting para interpretar el papel de la afroamericana Motormouth Maybelle en el musical Hair Spray. Dejando boquiabiertos a chicos y a grandes, la pequeñita de quinto de primaria puso en claro que el R&B es uno de los géneros donde se siente más cómoda. <br><br>
+
+                                        Pero esta oportunidad de interpretar a tan característico personaje de la cultura musical afroamericana estadounidense de los años sesenta fue todo un parte aguas. El show tuvo lugar en el colegio donde ella y su hermana gemela, América, estudiaban en California, y llevó a Camila a superar el recuerdo de una experiencia previa que le había dejado un agridulce sabor de boca cuando más pequeñita aún, al cantar una canción de su papá en un talent show (“Por qué no estás conmigo” del disco Niña amada mía, 2003), varios de los asistentes rieron ante la intensidad y la entrega con la que la pequeña Camila lo hacía, mientras que ella pensó que se trataba de burla. De tal forma que el contundente éxito en Hair Spray le dejó claro que su voz puede “hacer una diferencia”.</p>
+                                    </div>
                                 </div>
+
                             </div>
+                        </div>
 
-                            <div id="bioSec2" class="bioSections">
-                                <div id="letter-2" class="bioLetters easeInOut crystal">
-                                    <img src="img/biografia/A_foil_L.png" alt="A">
-                                </div>
+                        <div id="bioSec3" class="bioSections">
+                            <!-- <div id="letter-3" class="bioLetters easeInOut crystal">
+                                <img src="img/biografia/M_foil.png" alt="M">
+                            </div> -->
 
-                                <div class="textWrapper">
-                                    <div class="bioTitles">Descubrimiento de su voz</div>
+                            <div class="textWrapper">
+                                <div class="bioTitles">Preparación</div>
 
-                                    <p>Cuando era apenas estudiante de primaria en los Estados Unidos, Camila se ganó el respeto de quienes la llegaron a señalar despectivamente por ser latina, al realizar un casting para interpretar el papel de la afroamericana Motormouth Maybelle en el musical Hair Spray. Dejando boquiabiertos a chicos y a grandes, la pequeñita de quinto de primaria puso en claro que el R&B es uno de los géneros donde se siente más cómoda. <br><br>
-
-                                    Pero esta oportunidad de interpretar a tan característico personaje de la cultura musical afroamericana estadounidense de los años sesenta fue todo un parte aguas. El show tuvo lugar en el colegio donde ella y su hermana gemela, América, estudiaban en California, y llevó a Camila a superar el recuerdo de una experiencia previa que le había dejado un agridulce sabor de boca cuando más pequeñita aún, al cantar una canción de su papá en un talent show (“Por qué no estás conmigo” del disco Niña amada mía, 2003), varios de los asistentes rieron ante la intensidad y la entrega con la que la pequeña Camila lo hacía, mientras que ella pensó que se trataba de burla. De tal forma que el contundente éxito en Hair Spray le dejó claro que su voz puede “hacer una diferencia”.</p>
-                                </div>
+                                <p>Así, luego de cursar estudios de canto, violín, guitarra, flauta, ukelele, cajón, percusiones, danza, ballet, teatro y solfeo en la Escuela de Música Semper Altius en Guadalajara y en La Jolla Piano Institute de California, un día la vida le presentó una segunda gran oportunidad: Camila se encontraba de vacaciones con su papá y una noche se dio el momento para cantarle una de sus grandes favoritas, “Hurt” de Christina Aguilera (del disco Back to Basics, 2006). Emocionado hasta las lágrimas, Alejandro Fernández la impulsó entonces a profesionalizarse y seguir preparándose para salir por cuenta propia y cumplir sus sueños.</p>
                             </div>
+                        </div>
 
-                            <div id="bioSec3" class="bioSections">
-                                <div id="letter-3" class="bioLetters easeInOut crystal">
-                                    <img src="img/biografia/M_foil.png" alt="M">
+                        <div id="bioSec4" class="bioSections">
+                            <!-- <div id="letter-4" class="bioLetters easeInOut crystal">
+                                <img src="img/biografia/A_foil_R.png" alt="A">
+                            </div> -->
+
+                            <div class="textWrapper">
+                                <div class="bioPicture">
+                                    <div class="bioPic2"></div>
                                 </div>
+                                <div class="bioTitles">Nacimiento de la estrella</div>
 
-                                <div class="textWrapper">
-                                    <div class="bioTitles">Preparación</div>
+                                <p>Ahora, con un par de ciclos en la Berklee College of Music de Boston (2013 y 2015) donde Camila dice haber aprendido además de las clases de música, “de las personas porque tienes experiencias similares y conectas con gente como tú, aprendes de ellos y ellos aprenden de ti”. Con un espectro de gustos que va de Alicia Keys y Adelle pasando por Etta James hasta Eugenia León o Juan Gabriel, y por si fuera poco, con la influencia de su abuelo en todo lo que respecta al universo ranchero y de su padre también en el pop, Camila habrá de llevarlo todo a lenguaje y voz propios para ofrecer una propuesta genuina y desenfadada, como es ella. <br><br>
 
-                                    <p>Así, luego de cursar estudios de canto, violín, guitarra, flauta, ukelele, cajón, percusiones, danza, ballet, teatro y solfeo en la Escuela de Música Semper Altius en Guadalajara y en La Jolla Piano Institute de California, un día la vida le presentó una segunda gran oportunidad: Camila se encontraba de vacaciones con su papá y una noche se dio el momento para cantarle una de sus grandes favoritas, “Hurt” de Christina Aguilera (del disco Back to Basics, 2006). Emocionado hasta las lágrimas, Alejandro Fernández la impulsó entonces a profesionalizarse y seguir preparándose para salir por cuenta propia y cumplir sus sueños.</p>
-                                </div>
+                                Hablándole al amor y al desamor, a las historias que nos pasan a todos, Camila hará música dirigida a quien se identifique con ella, porque finalmente lo que ella más celebra es el milagro de la vida.
+                                </p>
                             </div>
-
-                            <div id="bioSec4" class="bioSections">
-                                <div id="letter-4" class="bioLetters easeInOut crystal">
-                                    <img src="img/biografia/A_foil_R.png" alt="A">
-                                </div>
-
-                                <div class="textWrapper">
-                                    <div class="bioTitles">Nacimiento de la estrella</div>
-
-                                    <p>Ahora, con un par de ciclos en la Berklee College of Music de Boston (2013 y 2015) donde Camila dice haber aprendido además de las clases de música, “de las personas porque tienes experiencias similares y conectas con gente como tú, aprendes de ellos y ellos aprenden de ti”. Con un espectro de gustos que va de Alicia Keys y Adelle pasando por Etta James hasta Eugenia León o Juan Gabriel, y por si fuera poco, con la influencia de su abuelo en todo lo que respecta al universo ranchero y de su padre también en el pop, Camila habrá de llevarlo todo a lenguaje y voz propios para ofrecer una propuesta genuina y desenfadada, como es ella. <br><br>
-
-                                    Hablándole al amor y al desamor, a las historias que nos pasan a todos, Camila hará música dirigida a quien se identifique con ella, porque finalmente lo que ella más celebra es el milagro de la vida.
-                                    </p>
-                                </div>
-                            </div>
-                        
-
-
                         </div>
                     </div>
                 </div>
@@ -130,8 +141,65 @@
                 <div id="galeriaWrapper" class="hiddenSection easeInOutSlow">
                     <div id="galeriaCurtain" class="hiddenSection easeInOutSlow">
                         <div id="galeriaContainer" class="crystal easeInOut">
-                            <div class="testing">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nostrum eligendi possimus rem veritatis, ullam saepe tenetur fugit voluptatibus culpa cum illum obcaecati voluptate nesciunt distinctio. Corporis, repudiandae ipsam eaque!
+                            <div class="galRows leftRow">
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                            </div>
+                            <div class="galRows midRow">
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galMidImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galMidImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galMidImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galMidImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                            </div>
+                            <div class="galRows rightRow">
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
+                                <div class="galImg galFullImg">
+                                    <img src="img/gal" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,19 +244,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <script type="text/javascript" src="js/vendor/skrollr.min.js"></script>
         
-        <script type="text/javascript">
-            var s = skrollr.init({
-                edgeStrategy: 'set',
-                easing: {
-                    WTF: Math.random,
-                    inverted: function(p) {
-                        return 1-p;
-                    }
-                }
-            });
-        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
