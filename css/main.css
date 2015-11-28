@@ -737,6 +737,7 @@ html{
             height: auto;
             text-align: center;
             color: #000;
+            background-color: rgba(255,255,255,1);
         }
 
         .galeQuotes img{
@@ -1052,6 +1053,84 @@ html{
             }
         /*END GALERIA*/
     }
+
+    /*TABLET PORTRAIT*/ 
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){
+        /*BIO*/
+            #biografiaCurtain{
+                height: 455%;
+            }
+
+            #bioSec1 .textWrapper{
+                width: 531.5px;
+                height: 500px;
+                right: 40px;
+            }
+
+            #bioSec1 .textWrapper p{
+                background-color: rgba(255,255,255,0);
+            }
+
+            #bioSec2{
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: 60%;
+                margin-bottom: 30%;
+            }
+
+            #bioVoiceWrapper{
+                height: 100%;
+            }
+
+            .bioLeftCol{
+                width: 100%;
+                height: 30%;
+            }
+
+            #bioSec2 .bioPicture{
+                width: 100%;
+                height: 100%;
+            }
+
+            #bioSec2 .bioPicture .bioPic1{
+                max-width: 238px;
+                max-height: 238px;
+            }
+
+            .bioRightCol{
+                width: 100%;
+                height: 100%;
+            }
+
+            #bioSec2 .textWrapper{
+                height: 100%;
+            }
+
+            #bioSec3{
+                -webkit-background-size: 120%;
+                background-size: 120%;
+                background-position: center center;
+            }
+
+            #bioSec4{
+                background-position: 330%;
+            }
+
+            #bioSec4 .textWrapper{
+                width: 65%;
+                bottom: auto;
+            }
+        /*END BIO*/
+
+
+        /*GALERIA*/
+            .galRows{
+                width: 100% !important;
+                height: auto !important;
+            }
+        /*END GALERIA*/
+    }
+    /*END TABLET PORTRAIT*/
 /*END RESPONSIVE CLASSES*/
 
 
