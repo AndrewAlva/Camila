@@ -1,4 +1,21 @@
 jQuery(document).ready(function($) {
+	// LOADER
+	setTimeout(function(){
+		$('#loader').addClass('MariaLuisa');
+		$('.progressBar').addClass('crystal');
+
+		setTimeout(function(){
+			$('#loader').addClass('crystal');
+			setTimeout(function(){
+				$('#loader').remove();
+
+				$('#headNav').removeClass('crystal');
+				$('#currentWrapper').removeClass('crystal');
+			},600);
+		},600);
+	},800);
+	
+
 	// Trigger for animations: 0 = Off, 1 = On
 	var triggerHome = 0;
 	var triggerBio = 1;
