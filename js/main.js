@@ -6,10 +6,10 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function(){
 			$('#loader').addClass('crystal');
+			$('#headNav').removeClass('crystal');
 			setTimeout(function(){
 				$('#loader').remove();
 
-				$('#headNav').removeClass('crystal');
 				$('#currentWrapper').removeClass('crystal');
 			},600);
 		},600);
@@ -61,6 +61,8 @@ jQuery(document).ready(function($) {
 				$('.menuOnBlack').removeClass('menuOnWhite');
 				$('#textContacto').addClass('contactoOnBlack');
 				$('#textContacto').removeClass('contactoOnWhite');
+				$('#biografiaMenu').find('.menuOnBlack').removeClass('activeBio');
+				$('#galeriaMenu').find('.menuOnBlack').removeClass('activeGal');
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
 
@@ -122,6 +124,8 @@ jQuery(document).ready(function($) {
 				$('#textContacto').addClass('contactoOnWhite');
 				$('.menuOnWhite').removeClass('menuOnBlack');
 				$('#textContacto').removeClass('contactoOnBlack');
+				$('#biografiaMenu').find('.menuOnWhite').addClass('activeBio');
+				$('#galeriaMenu').find('.menuOnWhite').removeClass('activeGal');
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
 				$('.contactoOnWhite').css('color', 'rgba(179,179,179,1)');
@@ -172,6 +176,8 @@ jQuery(document).ready(function($) {
 				$('.menuOnWhite').removeClass('menuOnBlack');
 				$('#textContacto').removeClass('contactoOnBlack');
 				$('#textContacto').addClass('contactoOnWhite');
+				$('#galeriaMenu').find('.menuOnWhite').addClass('activeGal');
+				$('#biografiaMenu').find('.menuOnWhite').removeClass('activeBio');
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
 

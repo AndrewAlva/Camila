@@ -365,6 +365,7 @@ html{
         position: absolute;
         width: 100%;
         height: 400%;
+        min-height: 3000px;
     }
 
     #bioLogo{
@@ -463,8 +464,10 @@ html{
 
                     #bioSec2 .bioPicture .bioPic1{
                         position: absolute;
-                        width: 320px;
-                        height: 320px;
+                        width: 100%;
+                        height: 100%;
+                        max-width: 320px;
+                        max-height: 320px;
                         margin: auto;
                         left: 0; right: 0;
                         background: url(../img/biografia/camila_bio_01.png);
@@ -761,7 +764,7 @@ html{
         }
             /*B/N BG PHOTOS*/
                 #pic1{
-                    background: url(../img/gal/byn/1.png);
+                    background: url(../img/gal/byn/1.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -769,7 +772,7 @@ html{
                 }
 
                 #pic2{
-                    background: url(../img/gal/byn/2.png);
+                    background: url(../img/gal/byn/2.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -777,7 +780,7 @@ html{
                 }
 
                 #pic3{
-                    background: url(../img/gal/byn/3.png);
+                    background: url(../img/gal/byn/3.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -785,7 +788,7 @@ html{
                 }
 
                 #pic4{
-                    background: url(../img/gal/byn/4.png);
+                    background: url(../img/gal/byn/4.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -793,7 +796,7 @@ html{
                 }
 
                 #pic5{
-                    background: url(../img/gal/byn/5.png);
+                    background: url(../img/gal/byn/5.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -801,7 +804,7 @@ html{
                 }
 
                 #pic6{
-                    background: url(../img/gal/byn/6.png);
+                    background: url(../img/gal/byn/6.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -809,7 +812,7 @@ html{
                 }
 
                 #pic7{
-                    background: url(../img/gal/byn/7.png);
+                    background: url(../img/gal/byn/7.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -817,7 +820,7 @@ html{
                 }
 
                 #pic8{
-                    background: url(../img/gal/byn/8.png);
+                    background: url(../img/gal/byn/8.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -825,7 +828,7 @@ html{
                 }
 
                 #pic9{
-                    background: url(../img/gal/byn/9.png);
+                    background: url(../img/gal/byn/9.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -833,7 +836,7 @@ html{
                 }
 
                 #pic10{
-                    background: url(../img/gal/byn/10.png);
+                    background: url(../img/gal/byn/10.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -841,7 +844,7 @@ html{
                 }
 
                 #pic11{
-                    background: url(../img/gal/byn/11.png);
+                    background: url(../img/gal/byn/11.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -849,7 +852,7 @@ html{
                 }
 
                 #pic12{
-                    background: url(../img/gal/byn/12.png);
+                    background: url(../img/gal/byn/12.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -857,7 +860,7 @@ html{
                 }
 
                 #pic13{
-                    background: url(../img/gal/byn/13.png);
+                    background: url(../img/gal/byn/13.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -865,7 +868,7 @@ html{
                 }
 
                 #pic14{
-                    background: url(../img/gal/byn/14.png);
+                    background: url(../img/gal/byn/14.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -873,7 +876,7 @@ html{
                 }
 
                 #pic15{
-                    background: url(../img/gal/byn/15.png);
+                    background: url(../img/gal/byn/15.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -881,7 +884,7 @@ html{
                 }
 
                 #pic16{
-                    background: url(../img/gal/byn/16.png);
+                    background: url(../img/gal/byn/16.jpg);
                     -webkit-background-size: 100%;
                     background-size: 100%;
                     background-repeat: no-repeat;
@@ -956,10 +959,100 @@ html{
         width: auto;
         height: auto;
     }
+
+    .activeBio{
+        color: rgba(0,0,0,1) !important;
+        text-decoration: underline !important;
+        font-size: 1.6em !important;
+    }
+
+    .activeGal{
+        color: rgba(248,185,134,1) !important;
+        text-decoration: underline !important;
+        font-size: 1.6em !important;
+    }
 /*END ANIMATION CLASSES*/
 
 
 
+/*RESPONSIVE CLASSES*/
+    /*HEIGHT OVERFLOW BIO FIX*/
+    @media (max-height: 845px) and (min-width: 768px){
+        .bioSections:last-child{
+            margin-bottom: 30%;
+        }
+    }
+
+    /*LAPTOP STYLE*/
+    @media (max-width: 1199px) and (min-width: 992px){
+        /*BIO*/
+            #bioLogo{
+                width: 167px;
+                height: 50px;
+            }
+
+            #bioSec1 .textWrapper .bioTitles, #bioSec2 .textWrapper .bioTitles, #bioSec3 .textWrapper .bioTitles, #bioSec4 .textWrapper .bioTitles{
+                font-size: 3.2em;
+            }
+
+            #bioSec1 .textWrapper p, #bioSec2 .textWrapper p, #bioSec3 .textWrapper p, #bioSec4 .textWrapper p{
+                font-size: 1.2em;
+            }
+
+            #bioSec1 .textWrapper{
+                width: 731.5px;
+                height: 260px;
+                right: 5%;
+            }
+
+            .bioRightCol{
+                width: 70%;
+            }
+
+            #bioSec2 .textWrapper{
+                width: 90%;
+            }
+
+            #bioSec3 .textWrapper{
+                top: 5%;
+                left: 55%;
+            }
+
+            #bioSec3{
+                margin-bottom: 0;
+            }
+
+            #bioSec4{
+                background-position: 130% 0;
+            }
+
+            #bioSec4 .textWrapper{
+                bottom: auto;
+                width: 45%;
+            }
+
+            #bioSec4 .bioPicture{
+                height: 200px;
+            }
+
+            #bioSec4 .bioPicture .bioPic2{
+                width: 200px;
+                height: 200px;
+            }
+
+            .bioSections:last-child{
+                margin-bottom: 10%;
+            }
+        /*END BIO*/
+
+        /*GALERIA*/
+            .quote{
+                height: 50px;
+                font-size: 1.5em;
+            }
+        /*END GALERIA*/
+    }
+/*END RESPONSIVE CLASSES*/
 
 
 
