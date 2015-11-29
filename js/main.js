@@ -52,6 +52,9 @@ jQuery(document).ready(function($) {
 
 			$('.menuOptions').toggleClass('mobCrystal');
 			$('#contactoMenu').toggleClass('mobCrystal');
+			$('.menuOptions').toggleClass('mobHidden');
+			$('#contactoMenu').toggleClass('mobHidden');
+			$('#rrss').toggleClass('mobHidden');
 			$('.mobLogo').toggleClass('notMobLogo');
 
 			// CHANGE RRSS COLOUR
@@ -136,6 +139,9 @@ jQuery(document).ready(function($) {
 
 				$('.menuOptions').addClass('mobCrystal');
 				$('#contactoMenu').addClass('mobCrystal');
+				$('.menuOptions').addClass('mobHidden');
+				$('#contactoMenu').addClass('mobHidden');
+				$('#rrss').addClass('mobHidden');
 				$('.mobLogo').addClass('notMobLogo');
 				$('.mobLogo').removeClass('stayMobLogo');
 
@@ -149,7 +155,7 @@ jQuery(document).ready(function($) {
 		$('#bioLogo').click(function() {
 			goHome();
 		});
-		$('.mobLogo').click(function() {
+		$('#mobLogoImg').click(function() {
 			goHome();
 		});
 
@@ -225,6 +231,10 @@ jQuery(document).ready(function($) {
 
 				$('.menuOptions').toggleClass('mobCrystal');
 				$('#contactoMenu').toggleClass('mobCrystal');
+				$('.menuOptions').toggleClass('mobHidden');
+				$('#contactoMenu').toggleClass('mobHidden');
+				$('#rrss').toggleClass('mobHidden');
+
 				$('.mobLogo').toggleClass('notMobLogo');
 				$('.mobLogo').addClass('stayMobLogo');
 
@@ -290,6 +300,9 @@ jQuery(document).ready(function($) {
 
 				$('.menuOptions').toggleClass('mobCrystal');
 				$('#contactoMenu').toggleClass('mobCrystal');
+				$('.menuOptions').toggleClass('mobHidden');
+				$('#contactoMenu').toggleClass('mobHidden');
+				$('#rrss').toggleClass('mobHidden');
 				$('.mobLogo').toggleClass('notMobLogo');
 				$('.mobLogo').removeClass('stayMobLogo');
 

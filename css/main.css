@@ -1156,11 +1156,11 @@ html{
             .mobCrystal{
                 opacity: 0 !important;
             }
-            .notInMob{
-                display: none;
-                visibility: hidden;
-                opacity: 0;
-                z-index: -1;
+            .notInMob, .mobHidden {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                z-index: -1 !important;
             }
 
             #menuWrapper{
@@ -1249,6 +1249,7 @@ html{
                         }
 
             .menuOptionsMobile{
+                position: absolute !important;
                 height: 47px !important;
                 display: block !important;
                 right: 0 !important;
@@ -1266,6 +1267,7 @@ html{
                 bottom: 3em !important;
             }
             #biografiaMenu {
+                width: 120px !important;
                 top: 0 !important;
                 bottom: 0 !important; 
                 margin-left: auto !important;
@@ -1352,12 +1354,157 @@ html{
                 height: 75px;
             }
         /*END HOME*/
+
+        /*BIO*/
+            #biografiaCurtain{
+                height: 475%;
+                max-height: 2200px;
+            }
+
+            #biografiaContainer{
+                min-height: 1920px;
+                max-height: 2800px;
+            }
+
+            #bioSec1{
+                background-position: -15px 30px;
+                margin-bottom: 0;
+            }
+
+            #bioSec1 .textWrapper{
+                width: 80%;
+                max-width: 400px;
+                height: 50%;
+                right: 5%;
+            }
+
+            #bioSec1 .textWrapper .bioTitles, #bioSec2 .textWrapper .bioTitles, #bioSec3 .textWrapper .bioTitles, #bioSec4 .textWrapper .bioTitles{
+                font-size: 1.2em;
+            }
+            #bioSec1 .textWrapper p, #bioSec2 .textWrapper p, #bioSec3 .textWrapper p, #bioSec4 .textWrapper p{
+                font-size: .9em;
+                line-height: 1em;
+                margin-top: 0;
+            }
+
+            #bioSec1 .textWrapper p{
+                background-color: transparent;
+                width: 85%;
+            }
+
+            #bioSec2 .bgStroke{
+                top: -35%;
+                background-position: right;
+            }
+
+            #bioVoiceWrapper{
+                height: 100%;
+            }
+
+            .bioLeftCol{
+                width: 100%;
+                height: 150px;
+            }
+            #bioSec2 .bioPicture{
+                width: 100%;
+                height: 100%;
+            }
+
+            #bioSec2 .bioPicture .bioPic1{
+                max-width: 150px;
+                max-height: 150px;
+            }
+
+            #bioSec2{
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: 60% 50%;
+                height: 35%;
+                max-height: 672px;
+            }
+
+            .bioRightCol{
+                width: 90%;
+            }
+
+            #bioSec2 .textWrapper{
+                width: 90%;
+                height: 90%;
+            }
+
+            #bioSec2 .textWrapper .bioTitles{
+                width: 100%;
+            }
+
+            #bioSec3{
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: 40% 50%;
+            }
+
+            #bioSec3 .textWrapper{
+                top: 5%;
+                width: 45%;
+                left: 55%;
+            }
+
+            #bioSec3 .textWrapper p{
+                width: 85%;
+            }
+
+            #bioSec4{
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: 80vw 50%;
+            }
+
+            #bioSec4 .textWrapper{
+                bottom: auto;
+                width: 80%;
+                left: 5%;
+            }
+
+            #bioSec4 .bioPicture{
+                height: 150px;
+                margin-bottom: 5%;
+            }
+
+            #bioSec4 .bioPicture .bioPic2{
+                width: 150px;
+                height: 150px;
+            }
+        /*END BIO*/
+
+        /*GALERIA*/
+            .galRows{
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .quote{
+                height: 2em;
+                font-size: 1.6em;
+            }
+        /*END GALERIA*/
+    }
+
+    /*MOBILE LANDSCAPE*/
+    @media (max-width: 767px) and (orientation:landscape){
+        #bioSec1{
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: -10% -10px;
+        }
+
+        #bioSec1 .textWrapper{
+            max-height: 160px;
+        }
     }
 
 
 /*END RESPONSIVE CLASSES*/
     
-@media (min-width: 769px){
+@media (min-width: 768px){
     .onlyMob{
         display: none;
         visibility: hidden;
