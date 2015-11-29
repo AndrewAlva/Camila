@@ -1057,17 +1057,17 @@ html{
         /*END GALERIA*/
     }
 
-    /*TABLET PORTRAIT*/ 
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){
+    /*TABLET*/ 
+    @media (min-width: 768px) and (max-width: 1024px) {
         /*BIO*/
             #biografiaCurtain{
                 height: 455%;
             }
 
             #bioSec1 .textWrapper{
-                width: 531.5px;
-                height: 500px;
-                right: 40px;
+                width: 731.5px;
+                height: 260px;
+                right: 5%;
             }
 
             #bioSec1 .textWrapper p{
@@ -1134,6 +1134,15 @@ html{
         /*END GALERIA*/
     }
 
+    /*TABLET PORTRAIT*/
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){
+        #bioSec1 .textWrapper{
+                width: 531.5px;
+                height: 500px;
+                right: 40px;
+            }
+    }
+
     /*MOBILE*/
     @media (max-width: 767px){
         /*LOADER*/
@@ -1186,6 +1195,17 @@ html{
                 margin: auto;
                 top: 0; bottom: 0;
                 right: 23px;
+                cursor: pointer;
+
+                -webkit-transition: all .8s cubic-bezier(.6,0,0,1);
+                   -moz-transition: all .8s cubic-bezier(.6,0,0,1);
+                    -ms-transition: all .8s cubic-bezier(.6,0,0,1);
+                     -o-transition: all .8s cubic-bezier(.6,0,0,1);
+                        transition: all .8s cubic-bezier(.6,0,0,1);
+            }
+
+            #burguerIcon:hover{
+                height: 15px;
             }
 
                 #burguerIcon li{
@@ -1315,6 +1335,7 @@ html{
                 margin: auto;
                 top: 10px;
                 left: 0; right: 0;
+                cursor: pointer;
             }
 
             .notMobLogo{
