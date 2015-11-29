@@ -21,11 +21,62 @@ jQuery(document).ready(function($) {
 	var triggerBio = 1;
 	var triggerGal = 1;
 
-	// NAVIGATION INTERACTION
-		$('#homeMenu').click(function() {
+	var triggerMob;
+	var windowWidth = $(window).width();
+	if (windowWidth < 768){
+		triggerMob = 1;
+		triggerHome = 1;
+	} else {
+		triggerMob = 0;
+		triggerHome = 0;
+	}
 
+	$(window).mousemove(function() {
+		if (windowWidth != $(window).width() ) {
+			windowWidth = $(window).width();
+			if (windowWidth < 768){
+				triggerMob = 1;
+			} else {
+				triggerMob = 0;
+			}
+
+			console.log('New window width: '+ windowWidth);
+			console.log('Trigger mob: '+ triggerMob);
+		};
+	});
+
+	// MOBILE MENU
+		$('#burguerIcon').click(function() {
+			$('#menuWrapper').toggleClass('showMenuHome');
+			$('.burguerLines').toggleClass('activeMenu');
+
+			$('.menuOptions').toggleClass('mobCrystal');
+			$('#contactoMenu').toggleClass('mobCrystal');
+			$('.mobLogo').toggleClass('notMobLogo');
+
+			// CHANGE RRSS COLOUR
+			$('#rrss').toggleClass('crystal');
+
+			$('#sn-ico').removeAttr('src');
+			$('#ig-ico').removeAttr('src');
+			$('#fb-ico').removeAttr('src');
+			$('#tw-ico').removeAttr('src');
+
+			$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
+			$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
+			$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
+			$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+		});
+	// END MOBILE MENU
+
+	// NAVIGATION INTERACTION
+		function goHome(){
 			if(triggerHome == 1){
-				triggerHome = 0;
+				if (windowWidth < 768) {
+					triggerHome = 1;
+				} else{
+					triggerHome = 0;
+				};
 				triggerBio = 0;
 				triggerGal = 0;
 				$('#galeriaContainer').addClass('crystal');
@@ -61,6 +112,7 @@ jQuery(document).ready(function($) {
 				$('.menuOnBlack').removeClass('menuOnWhite');
 				$('#textContacto').addClass('contactoOnBlack');
 				$('#textContacto').removeClass('contactoOnWhite');
+				$('#homeMenu').find('.menuOnBlack').addClass('activeHomeMob');
 				$('#biografiaMenu').find('.menuOnBlack').removeClass('activeBio');
 				$('#galeriaMenu').find('.menuOnBlack').removeClass('activeGal');
 
@@ -76,7 +128,29 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').attr('src', 'img/rrss/ig.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw.svg');
+
+				// MOBILE INTERACTION
+				$('#menuWrapper').removeClass('showMenuHome');
+				$('.burguerLines').removeClass('activeMenu');
+				$('.burguerLines').removeClass('burguerLinesOnWhite');
+
+				$('.menuOptions').addClass('mobCrystal');
+				$('#contactoMenu').addClass('mobCrystal');
+				$('.mobLogo').addClass('notMobLogo');
+				$('.mobLogo').removeClass('stayMobLogo');
+
+				$('#rrss').addClass('crystal');
 			}
+		}
+
+		$('#homeMenu').click(function() {
+			goHome();
+		});
+		$('#bioLogo').click(function() {
+			goHome();
+		});
+		$('.mobLogo').click(function() {
+			goHome();
 		});
 
 
@@ -124,6 +198,7 @@ jQuery(document).ready(function($) {
 				$('#textContacto').addClass('contactoOnWhite');
 				$('.menuOnWhite').removeClass('menuOnBlack');
 				$('#textContacto').removeClass('contactoOnBlack');
+				$('#homeMenu').find('.menuOnWhite').removeClass('activeHomeMob');
 				$('#biografiaMenu').find('.menuOnWhite').addClass('activeBio');
 				$('#galeriaMenu').find('.menuOnWhite').removeClass('activeGal');
 
@@ -142,6 +217,19 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+
+				// MOBILE INTERACTION
+				$('#menuWrapper').toggleClass('showMenuHome');
+				$('.burguerLines').toggleClass('activeMenu');
+				$('.burguerLines').addClass('burguerLinesOnWhite');
+
+				$('.menuOptions').toggleClass('mobCrystal');
+				$('#contactoMenu').toggleClass('mobCrystal');
+				$('.mobLogo').toggleClass('notMobLogo');
+				$('.mobLogo').addClass('stayMobLogo');
+
+				
+				$('#rrss').toggleClass('crystal');
 			}
 		});
 
@@ -176,6 +264,7 @@ jQuery(document).ready(function($) {
 				$('.menuOnWhite').removeClass('menuOnBlack');
 				$('#textContacto').removeClass('contactoOnBlack');
 				$('#textContacto').addClass('contactoOnWhite');
+				$('#homeMenu').find('.menuOnWhite').removeClass('activeHomeMob');
 				$('#galeriaMenu').find('.menuOnWhite').addClass('activeGal');
 				$('#biografiaMenu').find('.menuOnWhite').removeClass('activeBio');
 
@@ -193,6 +282,19 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+
+				// MOBILE INTERACTION
+				$('#menuWrapper').toggleClass('showMenuHome');
+				$('.burguerLines').toggleClass('activeMenu');
+				$('.burguerLines').removeClass('burguerLinesOnWhite');
+
+				$('.menuOptions').toggleClass('mobCrystal');
+				$('#contactoMenu').toggleClass('mobCrystal');
+				$('.mobLogo').toggleClass('notMobLogo');
+				$('.mobLogo').removeClass('stayMobLogo');
+
+				
+				$('#rrss').toggleClass('crystal');
 			}
 		});
 
@@ -200,19 +302,23 @@ jQuery(document).ready(function($) {
 
 
 		$('#contactoMenu').mouseenter(function() {
-			$('#rrss').removeClass('crystal');
-			$('#contactoMenu').css('bottom', '0px');
+			if(triggerMob == 0){
+				$('#rrss').removeClass('crystal');
+				$('#contactoMenu').css('bottom', '0px');
 
-			$('.contactoOnBlack').css('color', 'rgba(255,255,255,1)');
-			$('.contactoOnWhite').css('color', 'rgba(248,185,134,1)');
+				$('.contactoOnBlack').css('color', 'rgba(255,255,255,1)');
+				$('.contactoOnWhite').css('color', 'rgba(248,185,134,1)');
+			}
 		});
 
 		$('#contactoMenu').mouseleave(function() {
-			$('#rrss').addClass('crystal');
-			$('#contactoMenu').css('bottom', '-30px');
+			if(triggerMob == 0){
+				$('#rrss').addClass('crystal');
+				$('#contactoMenu').css('bottom', '-30px');
 
-			$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
-			$('.contactoOnWhite').css('color', 'rgba(179,179,179,1)');
+				$('.contactoOnBlack').css('color', 'rgba(255,255,255,0.4)');
+				$('.contactoOnWhite').css('color', 'rgba(179,179,179,1)');
+			}
 		});
 	// END NAVIGATION INTERACTION
 });
