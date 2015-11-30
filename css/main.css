@@ -420,6 +420,7 @@ html{
                 left: 0; right: 0;
                 margin-top: 20px;
                 font-size: 1.4em;
+                line-height: 1em;
                 padding: 20px;
                 background-color: rgba(255,255,255,0.9);
             }
@@ -516,6 +517,7 @@ html{
                         padding: 20px;
                         margin-left: -20px;
                         font-size: 1.4em;
+                        line-height: 1em;
                         background-color: rgba(255,255,255,0.9);
                     }
 
@@ -544,6 +546,7 @@ html{
                 margin: auto;
                 margin-top: 20px;
                 font-size: 1.4em;
+                line-height: 1em;
                 padding: 20px;
                 margin-left: -20px;
                 background-color: rgba(255,255,255,0.9);
@@ -596,6 +599,7 @@ html{
                 left: 0; right: 0;
                 margin-top: 20px;
                 font-size: 1.4em;
+                line-height: 1em;
                 padding: 20px;
                 background-color: rgba(255,255,255,0.9);
             }
@@ -631,6 +635,8 @@ html{
             background-repeat: no-repeat;
             background-position: right;
             /*background-color: rgba(255,255,255,1);*/
+            margin-bottom: 100px;
+            margin-bottom: 15%;
         }
 
         #bioSec3{
@@ -1269,11 +1275,11 @@ html{
 
             .menuOptionsMobile{
                 position: absolute !important;
-                height: 47px !important;
+                height: 34px !important;
                 display: block !important;
                 right: 0 !important;
                 left: 0 !important;
-                font-size: 2em !important;
+                font-size: 1.5em !important;
                 -webkit-transform: rotate(0deg) !important;
                    -moz-transform: rotate(0deg) !important;
                     -ms-transform: rotate(0deg) !important;
@@ -1283,7 +1289,7 @@ html{
 
             #homeMenu {
                 top: 0 !important;
-                bottom: 3em !important;
+                bottom: 2.5em !important;
             }
             #biografiaMenu {
                 width: 120px !important;
@@ -1292,19 +1298,20 @@ html{
                 margin-left: auto !important;
             }
             #galeriaMenu {
-                top: 3em !important;
+                top: 2.5em !important;
                 bottom: 0 !important;
                 margin-right: auto !important;
             }
 
             #contactoMenu{
+                height: 60px !important;
                 bottom: 0 !important;
-                font-size: 2em !important;
+                font-size: 1.4em !important;
                 border-top: 1px solid #d78e5c;
             }
 
             #rrss{
-                bottom: 10px !important;
+                bottom: 5px !important;
             }
 
             #snapID{
@@ -1395,6 +1402,7 @@ html{
                 width: 80%;
                 max-width: 400px;
                 height: 50%;
+                max-height: 280px;
                 right: 5%;
             }
 
@@ -1520,6 +1528,7 @@ html{
             max-height: 160px;
         }
     }
+
 
 
 /*END RESPONSIVE CLASSES*/
