@@ -292,6 +292,10 @@ html{
         right: 0; left: 0; 
     }
 
+    #sn-ico{
+        z-index: -1;
+    }
+
     #snapID{
         width: 200px;
         position: absolute;
