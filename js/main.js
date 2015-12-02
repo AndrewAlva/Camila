@@ -64,11 +64,13 @@ jQuery(document).ready(function($) {
 			$('#ig-ico').removeAttr('src');
 			$('#fb-ico').removeAttr('src');
 			$('#tw-ico').removeAttr('src');
+			$('#yt-ico').removeAttr('src');
 
 			$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
 			$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
 			$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 			$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+			$('#yt-ico').attr('src', 'img/rrss/yt-br.svg');
 		});
 	// END MOBILE MENU
 
@@ -126,11 +128,13 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').removeAttr('src');
 				$('#fb-ico').removeAttr('src');
 				$('#tw-ico').removeAttr('src');
+				$('#yt-ico').removeAttr('src');
 
 				$('#sn-ico').attr('src', 'img/rrss/sn.svg');
 				$('#ig-ico').attr('src', 'img/rrss/ig.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw.svg');
+				$('#yt-ico').attr('src', 'img/rrss/yt.svg');
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').removeClass('showMenuHome');
@@ -218,11 +222,13 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').removeAttr('src');
 				$('#fb-ico').removeAttr('src');
 				$('#tw-ico').removeAttr('src');
+				$('#yt-ico').removeAttr('src');
 
 				$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
 				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+				$('#yt-ico').attr('src', 'img/rrss/yt-br.svg');
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').toggleClass('showMenuHome');
@@ -286,12 +292,14 @@ jQuery(document).ready(function($) {
 				$('#ig-ico').removeAttr('src');
 				$('#fb-ico').removeAttr('src');
 				$('#tw-ico').removeAttr('src');
+				$('#yt-ico').removeAttr('src');
 
 
 				$('#sn-ico').attr('src', 'img/rrss/sn-br.svg');
 				$('#ig-ico').attr('src', 'img/rrss/ig-br.svg');
 				$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 				$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
+				$('#yt-ico').attr('src', 'img/rrss/yt-br.svg');
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').toggleClass('showMenuHome');
@@ -334,4 +342,13 @@ jQuery(document).ready(function($) {
 			}
 		});
 	// END NAVIGATION INTERACTION
+
+	// YOUTUBE VIDEO
+	$('#ytFrame').click(function() {
+		$('#ytFrame').addClass('crystal');
+		setTimeout(function(){
+			$('#ytFrame').remove();
+		},600);
+	});
+	// END YT VIDEO
 });
