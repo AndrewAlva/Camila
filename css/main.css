@@ -183,30 +183,9 @@ html{
     }
 /*END LOADER*/
 
-#ytFrame{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    overflow: hidden;
-    z-index: 1000;
-}
-
-#ytFrame iframe{
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    
-    margin: auto;
-    top: 0; bottom: 0;
-    left: 0; right: 0;    
-}
-
-
-
 /*NAVIGATION MENU*/
     #menuWrapper .menuOptions{
-        position: fixed;
+        position: relative;
         width: 100px;
         height: 30px;
         list-style-type: none;
@@ -217,32 +196,14 @@ html{
         color: #fff;
         margin: auto;
         letter-spacing: 1px;
+        top: 0px;
     }
 
-    #homeMenu{
-        top: 40px;
-        left: 0;
-        right: 0;
-    }
-
-    #biografiaMenu{
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin-left: 5px !important;
-
-        -webkit-transform: rotate(-90deg);
-           -moz-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-             -o-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-    }
-
-    #galeriaMenu{
-        top: 0;
-        bottom: 0;
-        right: 0;
-        margin-right: 5px !important;
+    #rotateMenu{
+        position: fixed;
+        top: 190px;
+        right: -165px;
+        z-index: 1000000000;
 
         -webkit-transform: rotate(90deg);
            -moz-transform: rotate(90deg);
@@ -250,6 +211,36 @@ html{
              -o-transform: rotate(90deg);
                 transform: rotate(90deg);
     }
+
+        #rotateMenu li{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1;
+            *display: inline;
+
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0;
+        }
+
+        #homeMenu{
+            right: 0;
+            margin-right: 5px !important;
+
+        }
+
+        #biografiaMenu{
+            right: 0;
+            margin-right: 5px !important;
+
+        }
+
+        #galeriaMenu{
+            right: 0;
+            margin-right: 5px !important;
+
+        }
 
     #contactoMenu{
         position: fixed;
@@ -268,11 +259,14 @@ html{
         right: 0;
 
         z-index: 1000;
-        cursor: pointer;
     }
 
     #contactoMenu a{
         display: block;
+    }
+
+    #textContacto{
+        cursor: default;
     }
 
     #rrss{
@@ -368,6 +362,10 @@ html{
     #logoWrapper img {
         width: 100%;
     }
+
+    /*YOUTUBE BG*/
+
+    /*END YOUTUBE*/
 /*END HOME SECTION*/
 
 /*BIOGRAFIA SECTION*/
@@ -394,11 +392,11 @@ html{
     }
 
     #bioLogo{
-        position: fixed;
+        position: absolute;
         width: 237px;
         height: 70px;
         top: 66px;
-        right: 66px;
+        right: 116px;
         z-index: 1000;
         cursor: pointer
     }
@@ -1053,6 +1051,8 @@ html{
 
     /*MENU TEXT COLOURS*/
         .menuOnBlack{
+            position: relative;
+            top: 0;
             text-decoration: none;
             color: rgba(255,255,255,0.4);
         }
@@ -1061,6 +1061,8 @@ html{
         }
 
         .menuOnWhite{
+            position: relative;
+            top: 0;
             text-decoration: none;
             color: rgba(179,179,179,1);
         }
@@ -1095,12 +1097,16 @@ html{
     }
 
     .activeBio{
+        position: relative;
+        top: -10px;
         color: rgba(0,0,0,1) !important;
         text-decoration: underline !important;
         font-size: 1.6em !important;
     }
 
     .activeGal{
+        position: relative;
+        top: -10px;
         color: rgba(215,142,92,1) !important;
         text-decoration: underline !important;
         font-size: 1.6em !important;
@@ -1413,20 +1419,38 @@ html{
                         transform: rotate(0deg) !important;
             }
 
+            #rotateMenu{
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                -webkit-transform: rotate(0deg);
+                   -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                     -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+            }
+
             #homeMenu {
                 top: 0 !important;
                 bottom: 2.5em !important;
+                margin-right: auto !important;
             }
             #biografiaMenu {
                 width: 120px !important;
                 top: 0 !important;
                 bottom: 0 !important; 
                 margin-left: auto !important;
+                margin-right: auto !important;
             }
             #galeriaMenu {
                 top: 2.5em !important;
                 bottom: 0 !important;
                 margin-right: auto !important;
+            }
+            #noticiasMenu {
+                top: 5em !important;
+                bottom: 0 !important;
             }
 
             #contactoMenu{
@@ -1434,6 +1458,10 @@ html{
                 bottom: 0 !important;
                 font-size: 1.4em !important;
                 border-top: 1px solid #d78e5c;
+            }
+
+            .activeBio, .activeGal{
+                top: 0;
             }
 
             #rrss{
@@ -1693,8 +1721,22 @@ html{
         }
     }
 
+    /*MOBILE MENU OVERLAP MOBILE HORIZONTAL FIX*/
+    @media (max-width: 767px) and (max-height: 260px){
+        .menuOptionsMobile{
+            right: auto !important;
+        }
 
+        #homeMenu, #biografiaMenu, #galeriaMenu, #noticiasMenu{
+            left: 30px !important;
+            text-align: left !important;
+        }
 
+        #contactoMenu{
+            width: 200px;
+            top: 20px;
+        }
+    }
 /*END RESPONSIVE CLASSES*/
     
 @media (min-width: 768px){
