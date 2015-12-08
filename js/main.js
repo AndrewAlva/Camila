@@ -343,12 +343,5 @@ jQuery(document).ready(function($) {
 		});
 	// END NAVIGATION INTERACTION
 
-	// YOUTUBE VIDEO
-	$('#ytFrame').click(function() {
-		$('#ytFrame').addClass('crystal');
-		setTimeout(function(){
-			$('#ytFrame').remove();
-		},600);
-	});
-	// END YT VIDEO
+	
 });
