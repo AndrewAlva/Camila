@@ -389,7 +389,7 @@ html{
 /*HOME SECTION*/
     #homeWrapper{
         position: absolute;
-        background-color: #000;
+        background-color: rgba(0,0,0,1);
         width: 100%;
         height: 100%;
     }
@@ -409,6 +409,22 @@ html{
         -webkit-background-size: cover;
         background-size: cover;
         background-position: top center;
+    }
+
+    #videoContainer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .darkGlass{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
     }
 
     #logoWrapper{
@@ -1654,6 +1670,10 @@ html{
             #logoWrapper{
                 width: 250px;
                 height: 75px;
+            }
+
+            #videoContainer{
+                display: none;
             }
         /*END HOME*/
 

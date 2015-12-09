@@ -84,6 +84,7 @@ jQuery(document).ready(function($) {
 				};
 				triggerBio = 0;
 				triggerGal = 0;
+				$('#videoContainer').removeClass('crystal');
 				$('#galeriaContainer').addClass('crystal');
 				$('#biografiaContainer').addClass('crystal');
 
@@ -172,6 +173,7 @@ jQuery(document).ready(function($) {
 				triggerGal = 0;
 				triggerBio = 0;
 				
+				$('#videoContainer').addClass('crystal');
 				$('#galeriaContainer').addClass('crystal');
 
 				$('#biografiaWrapper').addClass('showSection');
@@ -258,6 +260,8 @@ jQuery(document).ready(function($) {
 				triggerHome = 0;
 				triggerBio = 0;
 				triggerGal = 0;
+
+				$('#videoContainer').addClass('crystal');
 				$('#biografiaContainer').addClass('crystal');
 
 				$('#galeriaWrapper').addClass('showSection');
@@ -344,20 +348,59 @@ jQuery(document).ready(function($) {
 	// END NAVIGATION INTERACTION
 
 	// YOUTUBE VIDEO
-	$('#playVideo').click(function() {
-		$('#fullWrapper').append('<div id="ytFrame" class="easeInOut crystal"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <iframe width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
-		setTimeout(function(){
-			$('#ytFrame').removeClass('crystal');
-		});
-		
-		$('#closeYtFrame').click(function() {
-			$('#ytFrame').addClass('crystal');
-			setTimeout(function(){
-				$('#ytFrame').remove();
-			},600);
-		});
-	});
+		$('#playVideo').click(function() {
+			$('#videoContainer').addClass('crystal');
 
-	
+			$('#fullWrapper').append('<div id="ytFrame" class="easeInOut crystal"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <iframe width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
+			setTimeout(function(){
+				$('#ytFrame').removeClass('crystal');
+			});
+			
+			$('#closeYtFrame').click(function() {
+				$('#videoContainer').removeClass('crystal');
+				$('#ytFrame').addClass('crystal');
+				setTimeout(function(){
+					$('#ytFrame').remove();
+				},600);
+			});
+		});
 	// END YT VIDEO
+
+	// MAIN BACKGROUND VIDEO SETUP WIDTH
+		var min_w = 300; // minimum video width allowed
+		var vid_w_orig;  // original video dimensions
+		var vid_h_orig;
+
+		jQuery(function() { // runs after DOM has loaded
+		    
+		    vid_w_orig = parseInt(jQuery('video').attr('width'));
+		    vid_h_orig = parseInt(jQuery('video').attr('height'));
+		    $('#debug').append("<p>DOM loaded</p>");
+		    
+		    jQuery(window).resize(function () { resizeToCover(); });
+		    jQuery(window).trigger('resize');
+		});
+
+		function resizeToCover() {
+		    
+		    // set the video viewport to the window size
+		    jQuery('#video-viewport').width(jQuery(window).width());
+		    jQuery('#video-viewport').height(jQuery(window).height());
+
+		    // use largest scale factor of horizontal/vertical
+		    var scale_h = jQuery(window).width() / vid_w_orig;
+		    var scale_v = jQuery(window).height() / vid_h_orig;
+		    var scale = scale_h > scale_v ? scale_h : scale_v;
+
+		    // don't allow scaled width < minimum video width
+		    if (scale * vid_w_orig < min_w) {scale = min_w / vid_w_orig;};
+
+		    // now scale the video
+		    jQuery('video').width(scale * vid_w_orig);
+		    jQuery('video').height(scale * vid_h_orig);
+		    // and center it by scrolling the video viewport
+		    jQuery('#video-viewport').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
+		    jQuery('#video-viewport').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
+		};
+	// END MAIN BACKGROUND VIDEO SETUP WIDTH
 });
