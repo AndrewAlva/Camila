@@ -183,6 +183,67 @@ html{
     }
 /*END LOADER*/
 
+/*YOUTUBE FRAME*/
+    #ytFrame{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        overflow: hidden;
+        z-index: 1000000000000000000;
+    }
+
+    #closeYtFrame{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    #closeYtFrame:hover{
+        opacity: 1;
+    }
+
+        #closeYtFrame .closeLines{
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            border-radius: 5px;
+            margin: auto;
+            top: 0; bottom: 0;
+            background-color: rgba(255,255,255,1);
+        }
+
+            #closeYtFrame .closeLines:first-child{
+                -webkit-transform: rotate(45deg);
+                   -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                     -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+            }
+
+            #closeYtFrame .closeLines:last-child{
+                -webkit-transform: rotate(-45deg);
+                   -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                     -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+            }
+
+    #ytFrame iframe{
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        
+        margin: auto;
+        top: 0; bottom: 0;
+        left: 0; right: 0;    
+    }
+/*END YOUTUBE*/
+
 /*NAVIGATION MENU*/
     #menuWrapper .menuOptions{
         position: relative;
@@ -360,8 +421,67 @@ html{
     }
 
     #logoWrapper img {
+        position: relative;
         width: 100%;
+        height: auto;
     }
+
+    #playVideo{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        margin-top: 30px;
+    }
+
+    #logoWrapper .btnContainer{
+        position: absolute;
+        margin: auto;
+        top: 0; bottom: 0; right: 0; left: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    #logoWrapper .btnContainer .btn{
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        margin: auto;
+        top: 0; bottom: 0; left: 0; right: 0;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.4);
+        border: 1px solid rgba(255,255,255,0);
+        cursor: pointer;
+
+        -webkit-transition: all .4s ease-in-out;
+           -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+             -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+    }
+
+        #logoWrapper .btnContainer .btn:hover{
+            background-color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,1);
+            -webkit-transform: scale(1.2);
+               -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                 -o-transform: scale(1.2);
+                    transform: scale(1.2);
+        }
+
+
+     #logoWrapper .btnContainer .btn img{
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        margin: auto;
+        top: 0; left: 0; right: 0; bottom: 0;
+     }
+
+
+
 
     /*YOUTUBE BG*/
 
@@ -1420,6 +1540,7 @@ html{
             }
 
             #rotateMenu{
+                position: absolute; 
                 top: 0;
                 bottom: 0;
                 left: 0;
@@ -1723,19 +1844,37 @@ html{
 
     /*MOBILE MENU OVERLAP MOBILE HORIZONTAL FIX*/
     @media (max-width: 767px) and (max-height: 260px){
-        .menuOptionsMobile{
-            right: auto !important;
-        }
+        /*MENU NAV*/
+            .menuOptionsMobile{
+                right: auto !important;
+            }
 
-        #homeMenu, #biografiaMenu, #galeriaMenu, #noticiasMenu{
-            left: 30px !important;
-            text-align: left !important;
-        }
+            #homeMenu, #biografiaMenu, #galeriaMenu, #noticiasMenu{
+                left: 30px !important;
+                text-align: left !important;
+            }
 
-        #contactoMenu{
-            width: 200px;
-            top: 20px;
-        }
+            #contactoMenu{
+                width: 200px;
+                top: 20px;
+            }
+        /*END MENU NAV*/
+
+        /*HOME*/
+            #logoWrapper{
+                width: 150px;
+            }
+
+            #playVideo{
+                height: 80px;
+                margin-top: 10px;
+            }
+
+            #logoWrapper .btnContainer{
+                width: 80px;
+                height: 80px;
+            }
+        /*END HOME*/
     }
 /*END RESPONSIVE CLASSES*/
     

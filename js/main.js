@@ -343,5 +343,21 @@ jQuery(document).ready(function($) {
 		});
 	// END NAVIGATION INTERACTION
 
+	// YOUTUBE VIDEO
+	$('#playVideo').click(function() {
+		$('#fullWrapper').append('<div id="ytFrame" class="easeInOut crystal"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <iframe width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
+		setTimeout(function(){
+			$('#ytFrame').removeClass('crystal');
+		});
+		
+		$('#closeYtFrame').click(function() {
+			$('#ytFrame').addClass('crystal');
+			setTimeout(function(){
+				$('#ytFrame').remove();
+			},600);
+		});
+	});
+
 	
+	// END YT VIDEO
 });
