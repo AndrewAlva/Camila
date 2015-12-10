@@ -332,7 +332,7 @@ jQuery(document).ready(function($) {
 				$('#contactoMenu').css('bottom', '0px');
 
 				$('.contactoOnBlack').css('color', 'rgba(255,255,255,1)');
-				$('.contactoOnWhite').css('color', 'rgba(248,185,134,1)');
+				$('.contactoOnWhite').css('color', 'rgba(215,142,92,1)');
 			}
 		});
 
@@ -403,4 +403,5 @@ jQuery(document).ready(function($) {
 		    jQuery('#video-viewport').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
 		};
 	// END MAIN BACKGROUND VIDEO SETUP WIDTH
+	
 });
