@@ -47,9 +47,9 @@ jQuery(document).ready(function($) {
 	});
 
 	// MOBILE MENU
-		$('#burguerIcon').click(function() {
+		$('#burgerIcon').click(function() {
 			$('#menuWrapper').toggleClass('showMenuHome');
-			$('.burguerLines').toggleClass('activeMenu');
+			$('.burgerLines').toggleClass('activeMenu');
 
 			$('.menuOptions').toggleClass('mobCrystal');
 			$('#contactoMenu').toggleClass('mobCrystal');
@@ -74,9 +74,9 @@ jQuery(document).ready(function($) {
 			$('#yt-ico').attr('src', 'img/rrss/yt-br.svg');
 		});
 
-		$('#newsBurguerIcon').click(function() {
+		$('#newsBurgerIcon').click(function() {
 			$('#newsNav').toggleClass('showNewsNav');
-			$('.burguerLines').toggleClass('activeMenu');
+			$('.burgerLines').toggleClass('activeMenu');
 
 		});
 	// END MOBILE MENU
@@ -146,8 +146,8 @@ jQuery(document).ready(function($) {
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').removeClass('showMenuHome');
-				$('.burguerLines').removeClass('activeMenu');
-				$('.burguerLines').removeClass('burguerLinesOnWhite');
+				$('.burgerLines').removeClass('activeMenu');
+				$('.burgerLines').removeClass('burgerLinesOnWhite');
 
 				$('.menuOptions').addClass('mobCrystal');
 				$('#contactoMenu').addClass('mobCrystal');
@@ -241,8 +241,8 @@ jQuery(document).ready(function($) {
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').toggleClass('showMenuHome');
-				$('.burguerLines').toggleClass('activeMenu');
-				$('.burguerLines').addClass('burguerLinesOnWhite');
+				$('.burgerLines').toggleClass('activeMenu');
+				$('.burgerLines').addClass('burgerLinesOnWhite');
 
 				$('.menuOptions').toggleClass('mobCrystal');
 				$('#contactoMenu').toggleClass('mobCrystal');
@@ -314,8 +314,8 @@ jQuery(document).ready(function($) {
 
 				// MOBILE INTERACTION
 				$('#menuWrapper').toggleClass('showMenuHome');
-				$('.burguerLines').toggleClass('activeMenu');
-				$('.burguerLines').removeClass('burguerLinesOnWhite');
+				$('.burgerLines').toggleClass('activeMenu');
+				$('.burgerLines').removeClass('burgerLinesOnWhite');
 
 				$('.menuOptions').toggleClass('mobCrystal');
 				$('#contactoMenu').toggleClass('mobCrystal');
@@ -358,14 +358,18 @@ jQuery(document).ready(function($) {
 		$('#playVideo').click(function() {
 			$('#videoContainer').addClass('crystal');
 
-			$('#fullWrapper').append('<div id="ytFrame" class="easeInOut"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <div class="progressBar easeInOut"></div> <iframe width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
+			$('#fullWrapper').append('<div id="ytFrame" class="easeInOut"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <div class="progressBar easeInOut"></div> <iframe id="ytVp" class="easeInOut crystal" width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
 			setTimeout(function(){
 				$('#ytFrame').removeClass('crystal');
-			});
+				setTimeout(function(){
+					$('#ytVp').removeClass('crystal');
+				},2500);
+			},500);
 			
 			$('#closeYtFrame').click(function() {
 				$('#videoContainer').removeClass('crystal');
 				$('#ytFrame').addClass('crystal');
+				$('#ytVp').addClass('crystal');
 				setTimeout(function(){
 					$('#ytFrame').remove();
 				},600);

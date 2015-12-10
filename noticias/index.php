@@ -56,10 +56,12 @@
             
             <div id="newsNav" class="easeInOut">
                 <div id="newsLogo">
-                    <div id="newsBurguerIcon" class="burguerIcon onlyMob">
-                        <li class="burguerLines easeInOut"></li>
-                        <li class="burguerLines easeInOut"></li>
-                        <li class="burguerLines easeInOut"></li>
+                    <div id="newsBurgerIcon" class="onlyMob">
+                        <div class="burgerIcon">
+                            <li class="burgerLines easeInOut"></li>
+                            <li class="burgerLines easeInOut"></li>
+                            <li class="burgerLines easeInOut"></li>
+                        </div>
                     </div>
 
                     <a href="../">

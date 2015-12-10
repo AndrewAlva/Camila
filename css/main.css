@@ -183,7 +183,7 @@ html{
 
     @keyframes loading{
         0%{width: 0%; }
-        100%{width: 90%; }
+        100%{width: 70%; }
     }
 /*END LOADER*/
 
@@ -1766,7 +1766,18 @@ html{
                 background-color: rgba(255,255,255,0.9) !important;
             }
 
-            .burguerIcon{
+            #newsBurgerIcon{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                right: 0;
+            }
+
+            #newsBurgerIcon .burgerIcon{
+                left: 0; right: 0;
+            }
+
+            .burgerIcon{
                 position: absolute;
                 width: 25px;
                 height: 10px;
@@ -1781,12 +1792,11 @@ html{
                      -o-transition: all .8s cubic-bezier(.6,0,0,1);
                         transition: all .8s cubic-bezier(.6,0,0,1);
             }
-
-            .burguerIcon:hover{
+            .burgerIcon:hover{
                 height: 15px;
             }
 
-                .burguerIcon li{
+                .burgerIcon li{
                     position: absolute;
                     list-style-type: none;
                     width: 100%;
@@ -1800,31 +1810,31 @@ html{
                             transform: rotate(0deg);
                 }
 
-                .burguerLinesOnWhite{
+                .burgerLinesOnWhite{
                     background-color: rgba(0,0,0,1) !important;
                 }
 
-                .burguerIcon li:first-child{
+                .burgerIcon li:first-child{
                     top: 0;
                     bottom: 100%;
                 }
 
-                .burguerIcon li:nth-child(2){
+                .burgerIcon li:nth-child(2){
                     top: 0;
                     bottom: 0;
                     left: 0; right: 0;
                 }
 
-                .burguerIcon li:last-child{
+                .burgerIcon li:last-child{
                     top: 100%;
                     bottom: -0.5px;
                 }
 
-                    .burguerIcon .activeMenu{
+                    .burgerIcon .activeMenu{
                         background-color: rgba(0,0,0,0.9) !important;
                     }
 
-                        .burguerIcon .activeMenu:first-child{
+                        .burgerIcon .activeMenu:first-child{
                             bottom: 0;
                             -webkit-transform: rotate(45deg) !important;
                                -moz-transform: rotate(45deg) !important;
@@ -1833,11 +1843,11 @@ html{
                                     transform: rotate(45deg) !important;
                         }
 
-                        .burguerIcon .activeMenu:nth-child(2){
+                        .burgerIcon .activeMenu:nth-child(2){
                             width: 0% !important;
                         }
 
-                        .burguerIcon .activeMenu:last-child{
+                        .burgerIcon .activeMenu:last-child{
                             top: 0;
                             -webkit-transform: rotate(-45deg) !important;
                                -moz-transform: rotate(-45deg) !important;
@@ -2125,7 +2135,7 @@ html{
                     height: 100% !important;
                 }
 
-                #newsNav .burguerIcon li{
+                #newsNav .burgerIcon li{
                     background-color: rgba(0,0,0,1);
                 }
 
