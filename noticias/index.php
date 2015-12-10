@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body id="newsBodyTag">
         <script>
           window.fbAsyncInit = function() {
             FB.init({
@@ -52,11 +52,17 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="newsFullWrapper">
+        <div id="newsFullWrapper" class="easeInOut crystal">
             
             <div id="newsNav" class="easeInOut">
                 <div id="newsLogo">
-                    <a href="#">
+                    <div id="newsBurguerIcon" class="burguerIcon onlyMob">
+                        <li class="burguerLines easeInOut"></li>
+                        <li class="burguerLines easeInOut"></li>
+                        <li class="burguerLines easeInOut"></li>
+                    </div>
+
+                    <a href="../">
                         <img src="../img/brand/camila-logo-b.svg" alt="Camila Fernández Oficial">
                     </a>
                 </div>
@@ -167,15 +173,12 @@
                     <img src="../img/news/1/new2.jpg" alt="Camila Fernández firma">
                     <img src="../img/news/1/new3.jpg" alt="Camila Fernández firma">
                 </div>
-            </div>
-            
-
-            <div id="loader">
-                <div class="progressBar easeInOut"></div>
-            </div>
-            
+            </div>     
         </div>
 
+        <div id="loader">
+            <div class="progressBar easeInOut"></div>
+        </div>
 
 
 

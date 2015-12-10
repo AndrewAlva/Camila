@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
 				$('#loader').remove();
 
 				$('#currentWrapper').removeClass('crystal');
+				$('#newsFullWrapper').removeClass('crystal');
 			},600);
 		},600);
 	},800);
@@ -71,6 +72,12 @@ jQuery(document).ready(function($) {
 			$('#fb-ico').attr('src', 'img/rrss/fb-br.svg');
 			$('#tw-ico').attr('src', 'img/rrss/tw-br.svg');
 			$('#yt-ico').attr('src', 'img/rrss/yt-br.svg');
+		});
+
+		$('#newsBurguerIcon').click(function() {
+			$('#newsNav').toggleClass('showNewsNav');
+			$('.burguerLines').toggleClass('activeMenu');
+
 		});
 	// END MOBILE MENU
 
