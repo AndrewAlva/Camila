@@ -14,7 +14,7 @@
         
         <meta property="og:title" content="Camila Fernández Oficial" />
         <meta property="og:site_name" content="Camila Fernández Oficial"/>
-        <meta property="og:url" content="http://camilafernandez.com.mx/noticias" />
+        <meta property="og:url" content="http://camilafernandez.com.mx/noticias/" />
         <meta property="og:description" content="Genuina con la música, como el oxígeno que respira desde que nació Camila Fernández sale al mundo a compartir lo que siente a través de su voz. Nacida en Guadalajara, Jalisco, en 1997, siempre ha estado rodeada de música, tanto por ser hija de Alejandro Fernández y nieta de Vicente Fernández, como por elección propia. Simple y sencillamente le encanta. De la música se nutre y a través de ésta se expresa, tan es así que cantando es como se ha ido abriendo camino en este mundo." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_MX" />
