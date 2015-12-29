@@ -408,8 +408,8 @@ html{
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 1;
-        background: url(../img/home/CF-2.jpg);
+        opacity: 0.8;
+        background: url(../img/home/CF-3.jpg);
         -webkit-background-size: cover;
         background-size: cover;
         background-position: top center;
