@@ -2373,12 +2373,13 @@ html{
             }
                 /* NEW SINGLE CICLO SIN FIN */
                     #weLoveContainer{
-                        bottom: 5px;
+                        bottom: 75px;
+                        top: 0;
                         left: 50px;
                     }
                     #CAFContainer{
-                        top: auto;
-                        bottom: 140px;
+                        top: 120px;
+                        bottom: 0;
                         right: auto;
                         left: 20px;
                     }
