@@ -158,6 +158,16 @@ jQuery(document).ready(function($) {
 				$('.mobLogo').removeClass('stayMobLogo');
 
 				$('#rrss').addClass('crystal');
+
+				// HIDE SINGLE IMAGES
+				$('#weLoveContainer').removeClass('hidden');
+				$('#CAFContainer').removeClass('hidden');
+				$('#bannerWeLove').removeClass('hidden');
+				setTimeout(function(){
+					$('#weLoveContainer').removeClass('crystal');
+					$('#CAFContainer').removeClass('crystal');
+					$('#bannerWeLove').removeClass('crystal');
+				},200);
 			}
 		}
 
@@ -255,6 +265,16 @@ jQuery(document).ready(function($) {
 
 				
 				$('#rrss').toggleClass('crystal');
+
+				// HIDE SINGLE IMAGES
+				$('#weLoveContainer').addClass('crystal');
+				$('#CAFContainer').addClass('crystal');
+				$('#bannerWeLove').addClass('crystal');
+				setTimeout(function(){
+					$('#weLoveContainer').addClass('hidden');
+					$('#CAFContainer').addClass('hidden');
+					$('#bannerWeLove').addClass('hidden');
+				},650);
 			}
 		});
 
@@ -327,6 +347,16 @@ jQuery(document).ready(function($) {
 
 				
 				$('#rrss').toggleClass('crystal');
+
+				// HIDE SINGLE IMAGES
+				$('#weLoveContainer').addClass('crystal');
+				$('#CAFContainer').addClass('crystal');
+				$('#bannerWeLove').addClass('crystal');
+				setTimeout(function(){
+					$('#weLoveContainer').addClass('hidden');
+					$('#CAFContainer').addClass('hidden');
+					$('#bannerWeLove').addClass('hidden');
+				},650);
 			}
 		});
 

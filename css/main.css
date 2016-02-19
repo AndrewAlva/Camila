@@ -408,7 +408,7 @@ html{
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 0.8;
+        opacity: 0.6;
         /*background: url(../img/home/CF-3.jpg);*/
         background: url(../img/home/CAF_Desk.jpg);
         -webkit-background-size: cover;
@@ -2054,6 +2054,42 @@ html{
             #videoContainer{
                 display: none;
             }
+
+            /* NEW SINGLE CICLO SIN FIN */
+                #weLoveContainer{
+                    width: 120px;
+                    height: 108px;
+                    top: auto;
+                    right: auto;
+                    bottom: 20px;
+                    left: 10px;
+                }
+
+                #bannerWeLove{
+                    width: 100px;
+                    height: 130px;
+                    bottom: 0;
+                    right: 20px;
+                }
+                    #bannerWeLove a img{
+                        width: 100%;
+                    }
+                    #bannerWeLove a h5{
+                        font-size: 1em;
+                        height: 30px;
+                        line-height: 30px;
+                        right: 0;
+                        width: 100%;
+                        text-align: center;
+                        
+                    }
+
+                #CAFContainer{
+                    width: 180px;
+                    height: 65px;
+                    top: 90px;
+                }
+            /* END CICLO SIN FIN */
         /*END HOME*/
 
         /*BIO*/
@@ -2334,6 +2370,14 @@ html{
                 width: 80px;
                 height: 80px;
             }
+                /* NEW SINGLE CICLO SIN FIN */
+                    #weLoveContainer{
+                        bottom: 5px;
+                    }
+                    #CAFContainer{
+                        top: 20px;
+                    }
+                /* END CICLO SIN FIN */
         /*END HOME*/
 
         /*NOTICIAS*/
