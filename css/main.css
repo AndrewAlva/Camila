@@ -2340,6 +2340,7 @@ html{
 
     /*MOBILE MENU OVERLAP MOBILE HORIZONTAL FIX*/
     @media (max-width: 767px) and (max-height: 320px){
+
         /*MENU NAV*/
             .menuOptionsMobile{
                 right: auto !important;
@@ -2373,9 +2374,13 @@ html{
                 /* NEW SINGLE CICLO SIN FIN */
                     #weLoveContainer{
                         bottom: 5px;
+                        left: 50px;
                     }
                     #CAFContainer{
-                        top: 20px;
+                        top: auto;
+                        bottom: 140px;
+                        right: auto;
+                        left: 20px;
                     }
                 /* END CICLO SIN FIN */
         /*END HOME*/
