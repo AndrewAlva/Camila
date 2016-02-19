@@ -409,11 +409,74 @@ html{
         width: 100%;
         height: 100%;
         opacity: 0.8;
-        background: url(../img/home/CF-3.jpg);
+        /*background: url(../img/home/CF-3.jpg);*/
+        background: url(../img/home/CAF_Desk.jpg);
         -webkit-background-size: cover;
         background-size: cover;
         background-position: top center;
     }
+
+    /* EL CICLO SIN FIN LAYOUT */
+        #weLoveContainer{
+            position: absolute;
+            z-index: 1;
+            width: 260px;
+            height: 235px;
+            margin: auto;
+            top: 120px;
+            left: 0;
+            right: 25%;
+        }
+            #weLoveContainer img{
+                width: 100%;
+            }
+
+        #CAFContainer{
+            position: absolute;
+            z-index: 1;
+            width: 290px;
+            height: 104px;
+            margin: auto;
+            top: 380px;
+            left: 0;
+            right: 25%;
+        }
+            #CAFContainer img{
+                width: 100%;
+            }
+
+        #bannerWeLove{
+            position: absolute;
+            z-index: 1;
+            width: 370px;
+            height: 167px;
+            bottom: 20px;
+            right: 50px;
+        }
+            #bannerWeLove a{
+                display: block;
+                color: #fff;
+                text-decoration: none;
+            }
+                #bannerWeLove a h5{
+                    position: relative;
+                    float: right;
+                    display: inline;
+                    text-transform: uppercase;
+                    margin: auto;
+                    right: 30px;
+                    height: 167px;
+                    line-height: 167px;
+                    font-size: 2.2em;
+                    font-weight: 300;
+                    
+                }
+                #bannerWeLove a img{
+                    position: relative;
+                    float: right;
+                    display: inline;
+                }
+    /* END CICLO SIN FIN */
 
     #videoContainer{
         position: absolute;
