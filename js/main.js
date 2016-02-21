@@ -163,22 +163,29 @@ jQuery(document).ready(function($) {
 				$('#weLoveContainer').removeClass('hidden');
 				$('#CAFContainer').removeClass('hidden');
 				$('#bannerWeLove').removeClass('hidden');
+				$('#playVideoSingle1').removeClass('hidden');
+				$('#videoSingle1Container').removeClass('hidden');
 				setTimeout(function(){
 					$('#weLoveContainer').removeClass('crystal');
 					$('#CAFContainer').removeClass('crystal');
 					$('#bannerWeLove').removeClass('crystal');
+					$('#playVideoSingle1').removeClass('crystal');
+					$('#videoSingle1Container').removeClass('crystal');
 				},200);
 			}
 		}
 
 		$('#homeMenu').click(function() {
 			goHome();
+			hideMobileFirstSingleVideo();
 		});
 		$('#bioLogo').click(function() {
 			goHome();
+			hideMobileFirstSingleVideo();
 		});
 		$('#mobLogoImg').click(function() {
 			goHome();
+			hideMobileFirstSingleVideo();
 		});
 
 
@@ -270,11 +277,17 @@ jQuery(document).ready(function($) {
 				$('#weLoveContainer').addClass('crystal');
 				$('#CAFContainer').addClass('crystal');
 				$('#bannerWeLove').addClass('crystal');
+				$('#playVideoSingle1').addClass('crystal');
+				$('#videoSingle1Container').addClass('crystal');
 				setTimeout(function(){
 					$('#weLoveContainer').addClass('hidden');
 					$('#CAFContainer').addClass('hidden');
 					$('#bannerWeLove').addClass('hidden');
+					$('#playVideoSingle1').addClass('hidden');
+					$('#videoSingle1Container').addClass('hidden');
 				},650);
+
+				hideMobileFirstSingleVideo();
 			}
 		});
 
@@ -352,11 +365,17 @@ jQuery(document).ready(function($) {
 				$('#weLoveContainer').addClass('crystal');
 				$('#CAFContainer').addClass('crystal');
 				$('#bannerWeLove').addClass('crystal');
+				$('#playVideoSingle1').addClass('crystal');
+				$('#videoSingle1Container').addClass('crystal');
 				setTimeout(function(){
 					$('#weLoveContainer').addClass('hidden');
 					$('#CAFContainer').addClass('hidden');
 					$('#bannerWeLove').addClass('hidden');
+					$('#playVideoSingle1').addClass('hidden');
+					$('#videoSingle1Container').addClass('hidden');
 				},650);
+
+				hideMobileFirstSingleVideo();
 			}
 		});
 
@@ -383,6 +402,31 @@ jQuery(document).ready(function($) {
 			}
 		});
 	// END NAVIGATION INTERACTION
+
+	// HOME SINGLE ECSF MOBILE TRIGGER VIDEO
+		function showMobileFirstSingleVideo(){
+			$('#videoSingle1Container').addClass('displayBlock');
+			setTimeout(function(){
+				$('#videoSingle1Container').addClass('opacity1');
+			},100);
+		}
+
+		function hideMobileFirstSingleVideo(){
+			$('#videoSingle1Container').removeClass('opacity1');
+			setTimeout(function(){
+				$('#videoSingle1Container').removeClass('displayBlock');
+			},600);
+		}
+
+
+		$('#playVideoSingle1').click(function() {
+			showMobileFirstSingleVideo();
+		});
+
+		$('#closeVideoSingle1').click(function() {
+			hideMobileFirstSingleVideo();
+		});
+	// END HOME SINGLE ECSF VIDEO
 
 	// YOUTUBE VIDEO
 		$('#playVideo').click(function() {
