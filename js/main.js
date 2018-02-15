@@ -432,7 +432,7 @@ jQuery(document).ready(function($) {
 		$('#playVideo').click(function() {
 			$('#videoContainer').addClass('crystal');
 
-			$('#fullWrapper').append('<div id="ytFrame" class="easeInOut"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <div class="progressBar easeInOut"></div> <iframe id="ytVp" class="easeInOut crystal" width="560" height="315" src="https://www.youtube.com/embed/DlFXVxH4Wq8?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
+			$('#fullWrapper').append('<div id="ytFrame" class="easeInOut"> <div id="closeYtFrame" class="easeInOut"> <div class="closeLines"></div> <div class="closeLines"></div> </div> <div class="progressBar easeInOut"></div> <iframe id="ytVp" class="easeInOut crystal" width="560" height="315" src="https://www.youtube.com/embed/D8usfxmFpsw?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>');
 			setTimeout(function(){
 				$('#ytFrame').removeClass('crystal');
 				setTimeout(function(){
